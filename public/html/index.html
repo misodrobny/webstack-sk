@@ -1,17 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webstack | Landing Page</title>
+<html lang="en" class="scroll-smooth">
 
-    <link rel="stylesheet" href="../style/main.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Webstack | Landing Page</title>
 
-    <h1 class="text-blue-400 text-[84px]">
-        Display
-    </h1>
-</body>
+        <link rel="shortcut icon" href="../assets/svgs/logo.svg" type="image/x-icon">
+
+        <link rel="stylesheet" href="../style/main.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <nav class="py-8" id="navigationBar">
+            <div class="container flex items-center justify-between">
+                <a href="/public/html/index.html">
+                    <img src="../assets/svgs/logo.svg" class="w-auto h-full" alt="">
+                </a>
+                <div class="flex flex-col items-center gap-8 lg:flex-row">
+                    <a href="#" class="nav-link">
+                        /#start
+                    </a>
+                    <a href="#" class="nav-link">
+                        /#speakers
+                    </a>
+                    <a href="#" class="nav-link">
+                        /#event-schedule
+                    </a>
+                    <a href="#" class="nav-link">
+                        /?propose-a-talk
+                    </a>
+                    <a href="#" class="btn-primary">
+                        /book-tickets
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <section id="start" class="container relative min-h-screen pb-[160px]">
+            <!-- Big W -->
+            <div class="absolute -top-[300px] right-32 -z-10">
+                <svg width="909" height="850" viewBox="0 0 909 850" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M393.041 334.838L481.719 256.214L786.725 431.416L649.285 107.633L737.954 29L908.922 487.633L828.626 558.829L393.041 334.838Z"
+                        fill="#002B2E" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M373.934 269.818L288.772 345.325V345.335L289.794 345.859L289.337 346.264L372.338 544.295L526.922 632.602L438.005 421.75L374.376 270.866L373.934 269.818ZM532.303 338.622L592.246 500.729L778.871 596.291L869.537 515.901L678.239 0L578.109 88.7773L732.029 452.935L532.303 338.622ZM571.655 774.717L486.749 850L0 602.811L85.9775 526.582L571.655 774.717Z"
+                        fill="#2EFFD9" />
+                </svg>
+            </div>
+
+            <h1
+                class="text-white coolvetica-bold md:leading-[128px] md:text-[118px] leading-[44px] text-[48px] tracking-[-2%] md:tracking-[-0.02em] lg:max-w-[770px] ml-0 lg:ml-[100px]">
+                _web developers conference <br>
+                <span class="text-gold coolvetica-bold">not only for laravel artisans_</span>
+            </h1>
+
+            <!-- Date -->
+            <div
+                class="text-turquoise-500 mt-[50px] px-0 lg:px-[100px] flex flex-col items-start w-max justify-end ml-auto">
+                <p class="mb-2 text-2xl coolvetica-bold">_when/where</p>
+                <p class="text-[48px] leading-[44px] coolvetica-bold">
+                    27_09_2023_ <br>
+                    hubhub bratislava_
+                </p>
+            </div>
+
+            <div class="absolute lg:left-[100px]">
+                <div class="flex items-end gap-[35px]">
+                    <a href="#"
+                        class="relative bg-turquoise-500 px-9 py-[35px] group">
+                        <!-- Triangle top left -->
+                        <span class="absolute top-0 left-0 border-t-[36px] border-t-dark-teal border-r-transparent border-r-[36px] w-0 h-0"></span>
+                        <!-- Triangle bottom right -->
+                        <span class="absolute bottom-0 right-0 border-b-[32px] border-b-dark-teal border-l-transparent border-l-[32px] w-0 h-0"></span>
+                        <img src="../assets/svgs/ic-arrow-downright.svg" alt="">
+
+                        <!-- Line stick -->
+                        <span class="h-[128px] w-[6px] bg-turquoise-500 absolute top-full -z-30"></span>
+
+                        <!-- bottom flat line dark -->
+                        <span class="absolute left-0 w-full h-full bg-dark-teal top-[6px] -z-10"></span>
+                        <!-- bottom flat line turquoise -->
+                        <span class="absolute left-0 w-[70%] h-full bg-turquoise-500 top-[9px] -z-20"></span>
+
+                        <!-- Bottom rotate line addon -->
+                        <span class="absolute right-[14px] z-0 w-[3px] h-[44px] transform rotate-45 bg-turquoise-500 bottom-[-14px]"></span>
+                    </a>
+                    <p class="text-lg text-white coolvetica-book">
+                        /#speakers
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+
 </html>

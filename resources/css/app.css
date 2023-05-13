@@ -4,6 +4,10 @@
 
 @layer base {
 
+    body {
+        @apply bg-dark-teal
+    }
+
     .flex::before,
     .flex::after {
         display: none !important;
@@ -59,5 +63,15 @@
 
     .coolvetica-heavy {
         font-family: "Coolvetica Hv" !important;
+    }
+}
+
+@layer components {
+    .nav-link {
+        @apply px-2 pt-1 pb-2 text-2xl text-center text-white bg-dark-teal coolvetica-regular hover:underline underline-offset-8 hover:text-turquoise-100 focus:text-turquoise-100
+    }
+
+    .btn-primary {
+        @apply px-6 py-3 text-xl transition-all bg-white rounded-full text-dark-teal coolvetica-bold hover:bg-turquoise-100 focus:bg-turquoise-100
     }
 }
