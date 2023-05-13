@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    .flex::before,
+    .flex::after {
+        display: none !important;
+    }
+
+    /* Book - Bk */
+    @font-face {
+        font-family: 'Coolvetica Bk';
+        src: url('../assets/font-coolvetica/CoolveticaBk-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* Regular */
+    @font-face {
+        font-family: 'Coolvetica Rg';
+        src: url('../assets/font-coolvetica/CoolveticaRg-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* Bold */
+    @font-face {
+        font-family: 'Coolvetica Bold';
+        src: url('../assets/font-coolvetica/CoolveticaRg-Bold.woff2') format('woff2');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    /* Heavy */
+    @font-face {
+        font-family: 'Coolvetica Hv';
+        src: url('../assets/font-coolvetica/CoolveticaHv-Regular.woff2') format('woff2');
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    * {
+        font-family: "Coolvetica Bk";
+    }
+
+    .coolvetica-book {
+        font-family: "Coolvetica Bk" !important;
+    }
+
+    .coolvetica-regular {
+        font-family: "Coolvetica Rg" !important;
+    }
+
+    .coolvetica-bold {
+        font-family: "Coolvetica Bold" !important;
+    }
+
+    .coolvetica-heavy {
+        font-family: "Coolvetica Hv" !important;
+    }
+}
