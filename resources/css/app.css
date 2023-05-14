@@ -75,3 +75,13 @@
         @apply px-6 py-3 text-xl transition-all bg-white rounded-full text-dark-teal coolvetica-bold hover:bg-turquoise-100 focus:bg-turquoise-100
     }
 }
+
+@layer utilities {
+    .top-left-triangle {
+        clip-path: polygon(54% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 53%);
+    }
+
+    .bottom-right-triangle-sm {
+        clip-path: polygon(100.3% 0%, 100% 77.4%, 82.8% 100.3%, 0% 100.3%, 0% 0%);
+    }
+}
