@@ -68,7 +68,7 @@
 
 @layer components {
     .nav-link {
-        @apply px-2 pt-1 pb-2 text-2xl text-center text-white bg-dark-teal coolvetica-regular hover:underline underline-offset-8 hover:text-turquoise-100 focus:text-turquoise-100
+        @apply px-2 pt-1 pb-2 text-2xl lg:text-center text-white bg-dark-teal coolvetica-regular hover:underline underline-offset-8 hover:text-turquoise-100 focus:text-turquoise-100
     }
 
     .btn-primary {

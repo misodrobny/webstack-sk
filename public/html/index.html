@@ -18,35 +18,51 @@
 
     <body>
 
-        <nav class="py-8" id="navigationBar">
-            <div class="container flex items-center justify-between">
-                <a href="/public/html/index.html">
-                    <img src="../assets/svgs/logo.svg" class="w-auto h-full" alt="">
-                </a>
-                <div class="flex flex-col items-center gap-8 lg:flex-row">
-                    <a href="#start" class="nav-link">
-                        /#start
+        <nav id="navigationBar">
+            <div class="container flex flex-col items-center lg:justify-between lg:flex-row">
+                <div class="relative inline-flex items-center justify-between w-full py-4 lg:w-auto lg:py-0">
+                    <!-- Logo -->
+                    <a href="/public/html/index.html">
+                        <img src="../assets/svgs/logo.svg" class="w-[65px] h-[75px] lg:w-auto lg:h-full" alt="">
                     </a>
-                    <a href="#speakers" class="nav-link">
-                        /#speakers
+                    <a href="javascript:void(0);" class="absolute right-0 z-40 p-2 -translate-y-1/2 top-1/2">
+                        <div class="w-6 h-[3px] bg-turquoise-500 first:mb-[10px]"></div>
+                        <div class="w-6 h-[3px] bg-turquoise-500 first:mb-[10px]"></div>
                     </a>
-                    <a href="#event-schedule" class="nav-link">
-                        /#event-schedule
-                    </a>
-                    <a href="#" class="nav-link">
-                        /?propose-a-talk
-                    </a>
-                    <a href="#book-tickets" class="btn-primary">
-                        /book-tickets
-                    </a>
+                </div>
+
+                <!-- Nav Menu -->
+                <div class="hidden lg:block">
+                    <div class="flex flex-col gap-8 lg:items-center lg:flex-row">
+                        <div class="inline-flex items-center lg:hidden">
+                            <p class="text-white coolvetica-bold text-[48px] leading-[44px] tracking-[-0.02em]">
+                                _nav
+                            </p>
+                        </div>
+                        <a href="#start" class="nav-link">
+                            /#start
+                        </a>
+                        <a href="#speakers" class="nav-link">
+                            /#speakers
+                        </a>
+                        <a href="#event-schedule" class="nav-link">
+                            /#event-schedule
+                        </a>
+                        <a href="#" class="nav-link">
+                            /?propose-a-talk
+                        </a>
+                        <a href="#book-tickets" class="btn-primary w-max">
+                            /book-tickets
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
 
-        <section id="start" class="container relative min-h-screen pb-[128px] lg:px-[100px]">
+        <section id="start" class="container relative min-h-screen pb-[128px] lg:px-[100px] overflow-hidden lg:overflow-visible">
             <!-- Big W -->
-            <div class="absolute -top-[300px] right-20 -z-10">
-                <svg width="909" height="850" viewBox="0 0 909 850" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="absolute top-0 -right-[104px] md:-top-[300px] md:right-20 -z-10">
+                <svg width="909" height="850" class="w-[356px] h-[333px] md:w-full md:h-full " viewBox="0 0 909 850" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M393.041 334.838L481.719 256.214L786.725 431.416L649.285 107.633L737.954 29L908.922 487.633L828.626 558.829L393.041 334.838Z"
                         fill="#002B2E" />
@@ -55,32 +71,37 @@
                         fill="#2EFFD9" />
                 </svg>
             </div>
+
             <h1
-                class="text-white coolvetica-bold md:leading-[128px] md:text-[118px] leading-[44px] text-[48px] tracking-[-0.02em] md:tracking-[-0.02em] lg:max-w-[770px] ml-0">
-                _web developers conference <br>
+                class="text-white coolvetica-bold md:leading-[128px] md:text-[118px] leading-[44px] text-[48px] tracking-[-0.02em] md:tracking-[-0.02em] lg:max-w-[770px] ml-0 lg:mt-5 mt-20">
+                _web <br> developers <br> conference <br>
                 <span class="text-gold coolvetica-bold">not only for laravel artisans_</span>
             </h1>
 
-            <!-- Date -->
-            <div class="text-turquoise-500 mt-[50px] px-0 flex flex-col items-start w-max justify-end ml-auto">
-                <p class="mb-2 text-2xl coolvetica-bold">_when/where</p>
-                <p class="text-[48px] leading-[44px] coolvetica-bold">
-                    27_09_2023_ <br>
-                    hubhub bratislava_
-                </p>
-            </div>
+            <div class="flex flex-col items-end justify-between md:flex-row">
+                <!-- Next section button (Light) -->
+                <div class="absolute translate-y-10 left-4 bottom-24 lg:static">
+                    <div class="flex items-end gap-[35px]">
+                        <a href="#speakers" class="relative group">
+                            <img src="../assets/svgs/ic-arrow-downright-light.svg" class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
+                            <img src="../assets/svgs/layer-light.svg" class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0" alt="">
+                            <!-- Line stick -->
+                            <span class="h-[140px] w-[3px] lg:w-[6px] bg-turquoise-500 absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
+                        </a>
+                        <p class="text-lg text-white coolvetica-book">
+                            /#speakers
+                        </p>
+                    </div>
+                </div>
 
-            <!-- Next section button (Light) -->
-            <div class="flex items-end gap-[35px]">
-                <a href="#speakers" class="relative group">
-                    <img src="../assets/svgs/ic-arrow-downright-light.svg" class="relative z-20" alt="">
-                    <img src="../assets/svgs/layer-light.svg" class="absolute z-10 transition-all top-2 group-hover:top-[-1px]" alt="">
-                    <!-- Line stick -->
-                    <span class="h-[140px] w-[6px] bg-turquoise-500 absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
-                </a>
-                <p class="text-lg text-white coolvetica-book">
-                    /#speakers
-                </p>
+                <!-- Date -->
+                <div class="text-turquoise-500 mt-[70px] md:mt-[50px] px-0 flex flex-col items-start w-max justify-end ml-auto mb-[134px] lg:mb-0">
+                    <p class="mb-2 text-xl md:text-2xl coolvetica-bold">_when/where</p>
+                    <p class="text-[30px] leading-[38px] md:text-[48px] md:leading-[44px] coolvetica-bold">
+                        27_09_2023_ <br>
+                        hubhub bratislava_
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -238,14 +259,29 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Trigger Next -->
+                    <div class="absolute -translate-y-1/2 top-1/2 lg:right-[200px]" id="pseudoNextSlide">
+                        <a href="javascript:void(0);" class="relative group">
+                            <img src="../assets/svgs/ic-arrow-right.svg" class="relative z-20" alt="">
+                            <img src="../assets/svgs/layer-light.svg" class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0" alt="">
+                        </a>
+                    </div>
+                    <!-- Trigger Prev -->
+                    <div class="absolute hidden -translate-y-1/2 top-1/2 lg:left-32" id="pseudoPrevSlide">
+                        <a href="javascript:void(0);" class="relative group">
+                            <img src="../assets/svgs/ic-arrow-left.svg" class="relative z-20" alt="">
+                            <img src="../assets/svgs/layer-light.svg" class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0" alt="">
+                        </a>
+                    </div>
                 </div>
 
-                <div class="container relative">
+                <div class="container relative mt-[128px]">
                     <!-- Next section button (Dark) -->
                     <div class="flex items-end gap-[35px]">
                         <a href="#event-schedule" class="relative group">
                             <img src="../assets/svgs/ic-arrow-downright-dark.svg" class="relative z-20" alt="">
-                            <img src="../assets/svgs/layer-dark.svg" class="absolute z-10 transition-all top-2 group-hover:top-[-1px]" alt="">
+                            <img src="../assets/svgs/layer-dark.svg" class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0" alt="">
                             <!-- Line stick -->
                             <span class="h-[140px] w-[6px] bg-dark-teal absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
                         </a>
@@ -447,12 +483,12 @@
                     </ul>
                 </div>
 
-                <div class="container relative">
+                <div class="container relative mt-[128px]">
                     <!-- Next section button (Dark) -->
                     <div class="flex items-end gap-[35px]">
                         <a href="#book-tickets" class="relative group">
                             <img src="../assets/svgs/ic-arrow-downright-dark.svg" class="relative z-20" alt="">
-                            <img src="../assets/svgs/layer-dark.svg" class="absolute z-10 transition-all top-2 group-hover:top-[-1px]" alt="">
+                            <img src="../assets/svgs/layer-dark.svg" class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0" alt="">
                             <!-- Line stick -->
                             <span class="h-[140px] w-[6px] bg-dark-teal absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
                         </a>
@@ -465,37 +501,39 @@
         </section>
 
         <section id="book-tickets" class="border-b-[35px] border-turquoise-500">
-            <div id="autoSlideContainer" class="min-h-[220px]">
+            <div id="autoSlideContainer" class="md:min-h-[220px]">
                 <a href="https://invition.eu"
-                    class="md:text-[190px] tracking-[-0.02em] leading-[204px] coolvetica-bold ml-20 text-turquoise-500 min-w-max slider"
+                    class="text-[44px] md:text-[190px] tracking-[-0.02em] leading-[47px] md:leading-[204px] coolvetica-bold ml-[18px] md:ml-20 text-turquoise-500 min-w-max slider"
                     title="Book your ticket on invition.eu now!" target="_blank">
                     _Book your tickets
                 </a>
                 <a href="https://invition.eu"
-                    class="md:text-[190px] tracking-[-0.02em] leading-[204px] coolvetica-bold ml-20 text-turquoise-500 min-w-max slider"
+                    class="text-[44px] md:text-[190px] tracking-[-0.02em] leading-[47px] md:leading-[204px] coolvetica-bold ml-[18px] md:ml-20 text-turquoise-500 min-w-max slider"
                     title="Book your ticket on invition.eu now!" target="_blank">
                     _Book your tickets
                 </a>
                 <a href="https://invition.eu"
-                    class="md:text-[190px] tracking-[-0.02em] leading-[204px] coolvetica-bold ml-20 text-turquoise-500 min-w-max slider"
+                    class="text-[44px] md:text-[190px] tracking-[-0.02em] leading-[47px] md:leading-[204px] coolvetica-bold ml-[18px] md:ml-20 text-turquoise-500 min-w-max slider"
                     title="Book your ticket on invition.eu now!" target="_blank">
                     _Book your tickets
                 </a>
             </div>
 
-            <div class="container relative md:pt-[128px] pb-12 md:pb-[114px] lg:px-[100px] flex flex-col">
+            <div class="container relative pt-6 md:pt-[128px] pb-12 md:pb-[114px] lg:px-[100px] flex flex-col">
                 <div class="flex-col flex-items-center md:flex-row">
                     <!-- Mail To -->
-                    <div class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[136px]">
+                    <div class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[136px] w-full md:w-max">
                         <div class="w-fit md:h-[60px] py-[15px]">
                             <img src="../assets/svgs/ic-arrow-upright.svg" alt="">
                         </div>
-                        <div class="flex flex-col group w-max">
-                            <label for=""
-                                class="text-turquoise-500 coolvetica-regular text-[20px] leading-[30px]">mailto:</label>
-                            <input type="email" name="email" id="email"
-                                class="bg-transparent text-turquoise-500 text-[48px] leading-[44px] tracking-[-0.02em] coolvetica-regular pb-[13px] focus:outline-none max-w-[400px]"
-                                value="hello@webstack.com" readonly>
+                        <div class="flex flex-col w-full group md:w-max">
+                            <div class="flex flex-row md:flex-col gap-[13px] items-center md:items-start pb-[13px]">
+                                <label for=""
+                                    class="text-turquoise-500 coolvetica-regular text-lg md:text-[20px] md:leading-[30px]">mailto:</label>
+                                <a href="mailto:hello@webstack.com" class="text-white md:text-turquoise-500 text-xl md:text-[48px] md:leading-[44px] tracking-[-0.02em] coolvetica-regular">
+                                    hello@webstack.com
+                                </a>
+                            </div>
                             <!-- bottom line -->
                             <div class="relative bg-[#17a68c] w-full h-[3px]">
                                 <div
@@ -574,16 +612,52 @@
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
+            // Init AOS animate
             AOS.init();
+
+            const prevNextButtons = true
 
             $('#speakerCards').flickity({
                 cellAlign: 'center',
                 contain: true,
                 pageDots: false,
-                imagesLoaded: true
+                imagesLoaded: true,
+                prevNextButtons: prevNextButtons
             })
 
             $('.flickity-prev-next-button').addClass('!opacity-0')
+
+            let prevEl = $('.flickity-prev-next-button.previous')
+            let nextEl = $('.flickity-prev-next-button.next')
+            let pseudoNextEl = $('#pseudoNextSlide')
+            let pseudoPrevEl = $('#pseudoPrevSlide').addClass('hidden')
+
+            if (prevNextButtons === false) {
+                pseudoNextEl.addClass('hidden')
+                pseudoPrevEl.addClass('hidden')
+            }
+
+            pseudoNextEl.on('click', (e) => {
+                nextEl.trigger('click')
+                if(prevEl[0].getAttribute('disabled') == null) {
+                    pseudoPrevEl.removeClass('hidden')
+                }
+
+                if(nextEl[0].getAttribute('disabled') != null) {
+                    $('#'+e.currentTarget.id).addClass('hidden')
+                }
+            })
+
+            pseudoPrevEl.on('click', (e) => {
+                prevEl.trigger('click')
+                if(prevEl[0].getAttribute('disabled') != null) {
+                    $('#'+e.currentTarget.id).addClass('hidden')
+                }
+
+                if(nextEl[0].getAttribute('disabled') == null) {
+                    pseudoNextEl.removeClass('hidden')
+                }
+            })
         </script>
     </body>
 
