@@ -1,0 +1,45 @@
+@keyframes moveSlideshowToLeft {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes moveSlideshowToRight {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+#autoSlideContainer {
+    display: flex;
+    flex-direction: row;
+    row-gap: 68px;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+#autoSlideContainer:hover .slider {
+    animation-play-state: paused;
+}
+
+#autoSlideContainer .slider {
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+    display: flex;
+    animation: 25s linear infinite;
+}
+
+#autoSlideContainer .slider {
+    animation-name: moveSlideshowToLeft;
+}

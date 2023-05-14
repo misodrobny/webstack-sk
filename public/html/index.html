@@ -10,6 +10,7 @@
         <link rel="shortcut icon" href="../assets/svgs/logo.svg" type="image/x-icon">
 
         <link rel="stylesheet" href="../style/main.css">
+        <link rel="stylesheet" href="../style/autoSlideAnimation.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
@@ -55,7 +56,7 @@
                 </svg>
             </div>
             <h1
-                class="text-white coolvetica-bold md:leading-[128px] md:text-[118px] leading-[44px] text-[48px] tracking-[-2%] md:tracking-[-0.02em] lg:max-w-[770px] ml-0">
+                class="text-white coolvetica-bold md:leading-[128px] md:text-[118px] leading-[44px] text-[48px] tracking-[-0.02em] md:tracking-[-0.02em] lg:max-w-[770px] ml-0">
                 _web developers conference <br>
                 <span class="text-gold coolvetica-bold">not only for laravel artisans_</span>
             </h1>
@@ -71,39 +72,11 @@
 
             <!-- Next section button (Light) -->
             <div class="flex items-end gap-[35px]">
-                <a href="#speakers" class="relative px-9 py-[35px] group">
-                    <!-- ic arrow -->
-                    <img src="../assets/svgs/ic-arrow-downright.svg" class="relative z-20 transition-all" alt="">
-
+                <a href="#speakers" class="relative group">
+                    <img src="../assets/svgs/ic-arrow-downright-light.svg" class="relative z-20" alt="">
+                    <img src="../assets/svgs/layer-light.svg" class="absolute z-10 transition-all top-2 group-hover:top-[-1px]" alt="">
                     <!-- Line stick -->
-                    <span class="h-[140px] w-[6px] bg-turquoise-500 absolute top-full -z-0"></span>
-
-                    <!-- Layer 0 -->
-                    <div
-                        class="absolute top-0 left-0 z-10 w-full h-full bg-turquoise-500 border-b-[8px] border-dark-teal transition-all focus:hover:border-none">
-                        <div class="relative w-full h-full">
-                            <!-- Triangle top left -->
-                            <span
-                                class="absolute top-0 left-0 border-t-[32px] border-t-dark-teal border-r-transparent border-r-[32px] w-0 h-0"></span>
-                            <!-- Triangle bottom right -->
-                            <span
-                                class="absolute bottom-0 right-0 border-b-[32px] border-b-dark-teal border-l-transparent border-l-[32px] w-0 h-0 z-30"></span>
-                        </div>
-                    </div>
-
-                    <!-- Layer 1 -->
-                    <div
-                        class="absolute top-[7px] left-0 w-full h-full bg-turquoise-500 z-0 group-hover:top-0 group-focus:top-0 transition-all group-hover:opacity-0">
-                        <div class="relative w-full h-full">
-                            <!-- Triangle bottom right -->
-                            <span
-                                class="absolute bottom-0 right-0 border-b-[32px] border-b-dark-teal border-l-transparent border-l-[32px] w-0 h-0 z-30"></span>
-                        </div>
-                    </div>
-
-                    <!-- Bottom rotate line addon -->
-                    <span
-                        class="absolute right-[12px] z-10 w-[6px] h-[50px] transform rotate-45 bg-turquoise-500 bottom-[-12px] group-hover:-translate-x-5 group-hover:-translate-y-5 group-focus:-translate-x-5 group-focus:-translate-y-5 transition-all group-hover:opacity-0"></span>
+                    <span class="h-[140px] w-[6px] bg-turquoise-500 absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
                 </a>
                 <p class="text-lg text-white coolvetica-book">
                     /#speakers
@@ -111,11 +84,10 @@
             </div>
         </section>
 
-        <section id="speakers" class="relative bg-turquoise-500 border-b-[35px] border-dark-teal">
-            <div class="relative min-h-screen pb-[160px] lg:py-[128px]">
+        <section id="speakers" class="relative bg-turquoise-500 border-b-[35px] border-dark-teal min-h-screen">
+            <div class="relative pb-[160px] lg:py-[128px]">
                 <div class="container lg:px-[100px]">
-                    <h3
-                        class="mb-[52px] text-dark-teal coolvetica-bold text-[84px] leading-[90px] tracking-[-2%]">
+                    <h3 class="mb-[52px] text-dark-teal coolvetica-bold text-[84px] leading-[90px] tracking-[-0.02em]">
                         _speakers
                     </h3>
                 </div>
@@ -131,7 +103,7 @@
                             <div class="pt-10 pb-11 px-11 bg-dark-teal group bottom-right-triangle-sm">
                                 <a href="#">
                                     <h5
-                                        class="max-w-[280px] w-full relative coolvetica-regular text-[48px] leading-[44px] tracking-[-2%] text-turquoise-500">
+                                        class="max-w-[280px] w-full relative coolvetica-regular text-[48px] leading-[44px] tracking-[-0.02em] text-turquoise-500">
                                         Nuno Maduro
                                     </h5>
                                 </a>
@@ -167,7 +139,7 @@
                             <div class="pt-10 pb-11 px-11 bg-dark-teal group bottom-right-triangle-sm">
                                 <a href="#">
                                     <h5
-                                        class="max-w-[280px] w-full relative coolvetica-regular text-[48px] leading-[44px] tracking-[-2%] text-turquoise-500">
+                                        class="max-w-[280px] w-full relative coolvetica-regular text-[48px] leading-[44px] tracking-[-0.02em] text-turquoise-500">
                                         Mateus Guimarães
                                     </h5>
                                 </a>
@@ -203,7 +175,7 @@
                             <div class="pt-10 pb-11 px-11 bg-dark-teal group bottom-right-triangle-sm">
                                 <a href="#">
                                     <h5
-                                        class="max-w-[280px] w-full relative coolvetica-regular text-[48px] leading-[44px] tracking-[-2%] text-turquoise-500">
+                                        class="max-w-[280px] w-full relative coolvetica-regular text-[48px] leading-[44px] tracking-[-0.02em] text-turquoise-500">
                                         Francisco Madeira
                                     </h5>
                                 </a>
@@ -239,7 +211,7 @@
                             <div class="pt-10 pb-11 px-11 bg-dark-teal group bottom-right-triangle-sm">
                                 <a href="#">
                                     <h5
-                                        class="max-w-[280px] w-full relative coolvetica-regular text-[48px] leading-[44px] tracking-[-2%] text-turquoise-500">
+                                        class="max-w-[280px] w-full relative coolvetica-regular text-[48px] leading-[44px] tracking-[-0.02em] text-turquoise-500">
                                         [your_name]
                                     </h5>
                                 </a>
@@ -271,40 +243,11 @@
                 <div class="container relative">
                     <!-- Next section button (Dark) -->
                     <div class="flex items-end gap-[35px]">
-                        <a href="#event-schedule" class="relative px-9 py-[35px] group">
-                            <!-- ic arrow -->
-                            <img src="../assets/svgs/ic-arrow-downright-turquoise.svg"
-                                class="relative z-20 transition-all" alt="">
-
+                        <a href="#event-schedule" class="relative group">
+                            <img src="../assets/svgs/ic-arrow-downright-dark.svg" class="relative z-20" alt="">
+                            <img src="../assets/svgs/layer-dark.svg" class="absolute z-10 transition-all top-2 group-hover:top-[-1px]" alt="">
                             <!-- Line stick -->
-                            <span class="h-[140px] w-[6px] bg-dark-teal absolute top-full -z-0"></span>
-
-                            <!-- Layer 0 -->
-                            <div
-                                class="absolute top-0 left-0 z-10 w-full h-full bg-dark-teal border-b-[8px] border-turquoise-500 transition-all focus:hover:border-none">
-                                <div class="relative w-full h-full">
-                                    <!-- Triangle top left -->
-                                    <span
-                                        class="absolute top-0 left-0 border-t-[32px] border-t-turquoise-500 border-r-transparent border-r-[32px] w-0 h-0"></span>
-                                    <!-- Triangle bottom right -->
-                                    <span
-                                        class="absolute bottom-0 right-0 border-b-[32px] border-b-turquoise-500 border-l-transparent border-l-[32px] w-0 h-0 z-30"></span>
-                                </div>
-                            </div>
-
-                            <!-- Layer 1 -->
-                            <div
-                                class="absolute top-[7px] left-0 w-full h-full bg-dark-teal z-0 group-hover:top-0 group-focus:top-0 transition-all group-hover:opacity-0">
-                                <div class="relative w-full h-full">
-                                    <!-- Triangle bottom right -->
-                                    <span
-                                        class="absolute bottom-0 right-0 border-b-[32px] border-b-turquoise-500 border-l-transparent border-l-[32px] w-0 h-0 z-30"></span>
-                                </div>
-                            </div>
-
-                            <!-- Bottom rotate line addon -->
-                            <span
-                                class="absolute right-[12px] z-10 w-[6px] h-[50px] transform rotate-45 bg-dark-teal bottom-[-12px] group-hover:-translate-x-5 group-hover:-translate-y-5 group-focus:-translate-x-5 group-focus:-translate-y-5 transition-all group-hover:opacity-0"></span>
+                            <span class="h-[140px] w-[6px] bg-dark-teal absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
                         </a>
                         <p class="text-lg text-dark-teal coolvetica-book">
                             /#event-schedule
@@ -314,23 +257,27 @@
             </div>
         </section>
 
-        <section id="event-schedule" class="relative bg-turquoise-500 border-b-[35px] border-dark-teal">
-            <div class="relative min-h-screen pb-[160px] py-12 lg:py-[128px]">
-                <div class="flex flex-col gap-[17px] md:items-center justify-between md:flex-row lg:px-[100px] mx-auto mb-12 md:mb-20 max-w-screen-2xl px-4">
+        <section id="event-schedule" class="relative bg-turquoise-500 border-b-[35px] border-dark-teal min-h-screen">
+            <div class="relative pb-[160px] py-12 lg:py-[128px]">
+                <div
+                    class="flex flex-col gap-[17px] md:items-center justify-between md:flex-row lg:px-[100px] mx-auto mb-12 md:mb-20 max-w-screen-2xl px-4">
                     <h3
-                        class="text-dark-teal coolvetica-bold text-[48px] leading-[44px] md:text-[84px] md:leading-[90px] tracking-[-2%]">
+                        class="text-dark-teal coolvetica-bold text-[48px] leading-[44px] md:text-[84px] md:leading-[90px] tracking-[-0.02em]">
                         _event-schedule
                     </h3>
-                    <p class="coolvetica-bold text-[20px] leading-[30px] md:text-[36px] md:leading-[44px] tracking-[-2%] text-dark-teal">
+                    <p
+                        class="coolvetica-bold text-[20px] leading-[30px] md:text-[36px] md:leading-[44px] tracking-[-0.02em] text-dark-teal">
                         27_09_2023_ / hubhub bratislava_
                     </p>
                 </div>
 
-                <!-- Schedul List -->
+                <!-- Schedule List -->
                 <div class="container max-w-[700px]">
                     <ul class="flex flex-col gap-3 md:gap-6">
-                        <li class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
-                            <p class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
+                        <li
+                            class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
+                            <p
+                                class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
                                 14:00 CET
                             </p>
                             <div>
@@ -344,12 +291,15 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
-                            <p class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
+                        <li
+                            class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
+                            <p
+                                class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
                                 14:15 CET
                             </p>
                             <div>
-                                <h5 class="text-turquoise-500 pt-1 bg-dark-teal coolvetica-regular text-2xl md:text-[36px] md:leading-[44px] tracking-[-2%] mb-[6px] md:mb-3 w-max">
+                                <h5
+                                    class="text-turquoise-500 pt-1 bg-dark-teal coolvetica-regular text-2xl md:text-[36px] md:leading-[44px] tracking-[-0.02em] mb-[6px] md:mb-3 w-max">
                                     All my mistakes
                                 </h5>
                                 <div class="inline-flex items-center text-lg md:text-xl text-dark-teal">
@@ -363,12 +313,15 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
-                            <p class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
+                        <li
+                            class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
+                            <p
+                                class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
                                 15:00 CET
                             </p>
                             <div>
-                                <h5 class="text-turquoise-500 pt-1 bg-dark-teal coolvetica-regular text-2xl md:text-[36px] md:leading-[44px] tracking-[-2%] mb-[6px] md:mb-3 w-max">
+                                <h5
+                                    class="text-turquoise-500 pt-1 bg-dark-teal coolvetica-regular text-2xl md:text-[36px] md:leading-[44px] tracking-[-0.02em] mb-[6px] md:mb-3 w-max">
                                     The future of PEST
                                 </h5>
                                 <div class="inline-flex items-center text-lg md:text-xl text-dark-teal">
@@ -383,8 +336,10 @@
                             </div>
                         </li>
                         <!-- break -->
-                        <li class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
-                            <p class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
+                        <li
+                            class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
+                            <p
+                                class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
                                 15:45 CET
                             </p>
                             <div>
@@ -398,12 +353,15 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
-                            <p class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
+                        <li
+                            class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
+                            <p
+                                class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
                                 16:15 CET
                             </p>
                             <div>
-                                <h5 class="text-turquoise-500 pt-1 bg-dark-teal coolvetica-regular text-2xl md:text-[36px] md:leading-[44px] tracking-[-2%] mb-[6px] md:mb-3 w-max">
+                                <h5
+                                    class="text-turquoise-500 pt-1 bg-dark-teal coolvetica-regular text-2xl md:text-[36px] md:leading-[44px] tracking-[-0.02em] mb-[6px] md:mb-3 w-max">
                                     My Mental Health Odyssey
                                 </h5>
                                 <div class="inline-flex items-center text-lg md:text-xl text-dark-teal">
@@ -418,8 +376,10 @@
                             </div>
                         </li>
                         <!-- break -->
-                        <li class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
-                            <p class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
+                        <li
+                            class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
+                            <p
+                                class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
                                 17:00 CET
                             </p>
                             <div>
@@ -433,8 +393,10 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
-                            <p class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
+                        <li
+                            class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
+                            <p
+                                class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
                                 17:15 CET
                             </p>
                             <div>
@@ -448,8 +410,10 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
-                            <p class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
+                        <li
+                            class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
+                            <p
+                                class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
                                 18:00 CET
                             </p>
                             <div>
@@ -463,8 +427,10 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
-                            <p class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
+                        <li
+                            class="pb-3 md:pb-[21px] flex flex-col md:flex-row md:items-center border-b-[3px] border-b-dark-teal last:border-none">
+                            <p
+                                class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
                                 18:15 CET
                             </p>
                             <div>
@@ -481,44 +447,14 @@
                     </ul>
                 </div>
 
-
                 <div class="container relative">
                     <!-- Next section button (Dark) -->
                     <div class="flex items-end gap-[35px]">
-                        <a href="#book-tickets" class="relative px-9 py-[35px] group">
-                            <!-- ic arrow -->
-                            <img src="../assets/svgs/ic-arrow-downright-turquoise.svg"
-                                class="relative z-20 transition-all" alt="">
-
+                        <a href="#book-tickets" class="relative group">
+                            <img src="../assets/svgs/ic-arrow-downright-dark.svg" class="relative z-20" alt="">
+                            <img src="../assets/svgs/layer-dark.svg" class="absolute z-10 transition-all top-2 group-hover:top-[-1px]" alt="">
                             <!-- Line stick -->
-                            <span class="h-[140px] w-[6px] bg-dark-teal absolute top-full -z-0"></span>
-
-                            <!-- Layer 0 -->
-                            <div
-                                class="absolute top-0 left-0 z-10 w-full h-full bg-dark-teal border-b-[8px] border-turquoise-500 transition-all focus:hover:border-none">
-                                <div class="relative w-full h-full">
-                                    <!-- Triangle top left -->
-                                    <span
-                                        class="absolute top-0 left-0 border-t-[32px] border-t-turquoise-500 border-r-transparent border-r-[32px] w-0 h-0"></span>
-                                    <!-- Triangle bottom right -->
-                                    <span
-                                        class="absolute bottom-0 right-0 border-b-[32px] border-b-turquoise-500 border-l-transparent border-l-[32px] w-0 h-0 z-30"></span>
-                                </div>
-                            </div>
-
-                            <!-- Layer 1 -->
-                            <div
-                                class="absolute top-[7px] left-0 w-full h-full bg-dark-teal z-0 group-hover:top-0 group-focus:top-0 transition-all group-hover:opacity-0">
-                                <div class="relative w-full h-full">
-                                    <!-- Triangle bottom right -->
-                                    <span
-                                        class="absolute bottom-0 right-0 border-b-[32px] border-b-turquoise-500 border-l-transparent border-l-[32px] w-0 h-0 z-30"></span>
-                                </div>
-                            </div>
-
-                            <!-- Bottom rotate line addon -->
-                            <span
-                                class="absolute right-[12px] z-10 w-[6px] h-[50px] transform rotate-45 bg-dark-teal bottom-[-12px] group-hover:-translate-x-5 group-hover:-translate-y-5 group-focus:-translate-x-5 group-focus:-translate-y-5 transition-all group-hover:opacity-0"></span>
+                            <span class="h-[140px] w-[6px] bg-dark-teal absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
                         </a>
                         <p class="text-lg text-dark-teal coolvetica-book">
                             /#book-tickets
@@ -528,6 +464,110 @@
             </div>
         </section>
 
+        <section id="book-tickets" class="border-b-[35px] border-turquoise-500">
+            <div id="autoSlideContainer" class="min-h-[220px]">
+                <a href="https://invition.eu"
+                    class="md:text-[190px] tracking-[-0.02em] leading-[204px] coolvetica-bold ml-20 text-turquoise-500 min-w-max slider"
+                    title="Book your ticket on invition.eu now!" target="_blank">
+                    _Book your tickets
+                </a>
+                <a href="https://invition.eu"
+                    class="md:text-[190px] tracking-[-0.02em] leading-[204px] coolvetica-bold ml-20 text-turquoise-500 min-w-max slider"
+                    title="Book your ticket on invition.eu now!" target="_blank">
+                    _Book your tickets
+                </a>
+                <a href="https://invition.eu"
+                    class="md:text-[190px] tracking-[-0.02em] leading-[204px] coolvetica-bold ml-20 text-turquoise-500 min-w-max slider"
+                    title="Book your ticket on invition.eu now!" target="_blank">
+                    _Book your tickets
+                </a>
+            </div>
+
+            <div class="container relative md:pt-[128px] pb-12 md:pb-[114px] lg:px-[100px] flex flex-col">
+                <div class="flex-col flex-items-center md:flex-row">
+                    <!-- Mail To -->
+                    <div class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[136px]">
+                        <div class="w-fit md:h-[60px] py-[15px]">
+                            <img src="../assets/svgs/ic-arrow-upright.svg" alt="">
+                        </div>
+                        <div class="flex flex-col group w-max">
+                            <label for=""
+                                class="text-turquoise-500 coolvetica-regular text-[20px] leading-[30px]">mailto:</label>
+                            <input type="email" name="email" id="email"
+                                class="bg-transparent text-turquoise-500 text-[48px] leading-[44px] tracking-[-0.02em] coolvetica-regular pb-[13px] focus:outline-none max-w-[400px]"
+                                value="hello@webstack.com" readonly>
+                            <!-- bottom line -->
+                            <div class="relative bg-[#17a68c] w-full h-[3px]">
+                                <div
+                                    class="absolute left-0 w-0 h-full transition-all bg-turquoise-500 group-hover:w-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- partner 1 -->
+                    <div class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[82px]">
+                        <div class="w-fit md:h-[60px] py-[15px]">
+                            <img src="../assets/svgs/ic-arrow-upright-upload.svg" alt="">
+                        </div>
+                        <div class="flex flex-col group w-max">
+                            <label for=""
+                                class="text-turquoise-500 coolvetica-regular text-[20px] leading-[30px]">rel='partner'</label>
+                            <img src="../assets/svgs/partner-brackets-turquoise.svg" class="mb-[13px] mt-[14px]" alt="">
+                            <!-- bottom line -->
+                            <div class="relative bg-[#17a68c] w-full h-[3px]">
+                                <div
+                                    class="absolute left-0 w-0 h-full transition-all bg-turquoise-500 group-hover:w-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- partner 2 -->
+                    <div class="inline-flex gap-[31px] items-end md:mr-12 lg:mr-[82px] last:mr-0">
+                        <div class="w-fit md:h-[60px] py-[15px]">
+                            <img src="../assets/svgs/ic-arrow-upright-upload.svg" alt="">
+                        </div>
+                        <div class="flex flex-col group w-max">
+                            <label for=""
+                                class="text-turquoise-500 coolvetica-regular text-[20px] leading-[30px]">rel='partner'</label>
+                            <img src="../assets/svgs/partner-theshop-turquoise.svg" class="mb-[13px] mt-[14px]" alt="">
+                            <!-- bottom line -->
+                            <div class="relative bg-[#17a68c] w-full h-[3px]">
+                                <div
+                                    class="absolute left-0 w-0 h-full transition-all bg-turquoise-500 group-hover:w-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer
+                    class="py-[7px] flex items-center justify-between mt-12 md:mt-[83px] gap-6 flex-col-reverse md:flex-row">
+                    <div class="inline-flex gap-12">
+                        <p class="text-lg text-turquoise-500 coolvetica-book">© Webstack 2023. All rights reserved.</p>
+                        <a href="#" class="text-lg text-white coolvetica-book">
+                            /privacy-policy
+                        </a>
+                    </div>
+
+                    <div class="flex items-center gap-6">
+                        <a href="#">
+                            <img src="../assets/svgs/logo-twitter.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../assets/svgs/logo-fb.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../assets/svgs/logo-youtube.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="../assets/svgs/logo-instagram.svg" alt="">
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </section>
 
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"
             integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
