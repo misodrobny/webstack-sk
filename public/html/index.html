@@ -18,21 +18,23 @@
 
     <body>
 
-        <nav id="navigationBar">
-            <div class="container flex flex-col items-center lg:justify-between lg:flex-row">
+        <nav id="navigationBar" class="lg:py-8">
+            <div class="container flex flex-col items-center w-full lg:justify-between lg:flex-row">
+                <!-- App Logo & Mobile nav toggler -->
                 <div class="relative inline-flex items-center justify-between w-full py-4 lg:w-auto lg:py-0">
                     <!-- Logo -->
                     <a href="/public/html/index.html">
                         <img src="../assets/svgs/logo.svg" class="w-[65px] h-[75px] lg:w-auto lg:h-full" alt="">
                     </a>
-                    <a href="javascript:void(0);" class="absolute right-0 z-40 p-2 -translate-y-1/2 top-1/2">
-                        <div class="w-6 h-[3px] bg-turquoise-500 first:mb-[10px]"></div>
-                        <div class="w-6 h-[3px] bg-turquoise-500 first:mb-[10px]"></div>
+                    <a href="javascript:void(0);" id="mobileToggler" data-target="#__navMenus">
+                        <div class="child"></div>
+                        <div class="child"></div>
                     </a>
                 </div>
 
-                <!-- Nav Menu -->
-                <div class="hidden lg:block">
+                <!-- Nav Menu - Hidden on mobile -->
+                <div class="absolute top-0 z-30 pt-[22px] lg:pt-0 pl-8 lg:pl-0 lg:z-0 lg:static border-l-[16px] border-l-turquoise-500 lg:border-none bg-dark-teal lg:bg-transparent overflow-y-auto w-full h-full lg:w-auto lg:h-auto left-full lg:left-0 transition-all duration-300"
+                    id="__navMenus">
                     <div class="flex flex-col gap-8 lg:items-center lg:flex-row">
                         <div class="inline-flex items-center lg:hidden">
                             <p class="text-white coolvetica-bold text-[48px] leading-[44px] tracking-[-0.02em]">
@@ -51,7 +53,7 @@
                         <a href="#" class="nav-link">
                             /?propose-a-talk
                         </a>
-                        <a href="#book-tickets" class="btn-primary w-max">
+                        <a href="#book-tickets" class="btn-primary w-max" id="bookTicketBtn">
                             /book-tickets
                         </a>
                     </div>
@@ -59,10 +61,12 @@
             </div>
         </nav>
 
-        <section id="start" class="container relative min-h-screen pb-[128px] lg:px-[100px] overflow-hidden lg:overflow-visible">
+        <section id="start"
+            class="container relative min-h-screen pb-[128px] lg:px-[100px] overflow-hidden lg:overflow-visible">
             <!-- Big W -->
-            <div class="absolute top-0 -right-[104px] md:-top-[300px] md:right-20 -z-10">
-                <svg width="909" height="850" class="w-[356px] h-[333px] md:w-full md:h-full " viewBox="0 0 909 850" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="absolute top-10 -right-[104px] md:-top-[300px] md:right-20 -z-10">
+                <svg width="909" height="850" class="w-[356px] h-[333px] md:w-full md:h-full " viewBox="0 0 909 850"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M393.041 334.838L481.719 256.214L786.725 431.416L649.285 107.633L737.954 29L908.922 487.633L828.626 558.829L393.041 334.838Z"
                         fill="#002B2E" />
@@ -73,20 +77,24 @@
             </div>
 
             <h1
-                class="text-white coolvetica-bold md:leading-[128px] md:text-[118px] leading-[44px] text-[48px] tracking-[-0.02em] md:tracking-[-0.02em] lg:max-w-[770px] ml-0 lg:mt-5 mt-20">
+                class="text-white coolvetica-bold md:leading-[128px] md:text-[118px] leading-[44px] text-[48px] tracking-[-0.02em] md:tracking-[-0.02em] lg:max-w-[770px] ml-0 lg:mt-5 mt-[60px]">
                 _web <br> developers <br> conference <br>
                 <span class="text-gold coolvetica-bold">not only for laravel artisans_</span>
             </h1>
 
             <div class="flex flex-col items-end justify-between md:flex-row">
                 <!-- Next section button (Light) -->
-                <div class="absolute translate-y-10 left-4 bottom-24 lg:static">
+                <div class="absolute translate-y-10 bottom-24 left-4 lg:bottom-36">
                     <div class="flex items-end gap-[35px]">
                         <a href="#speakers" class="relative group">
-                            <img src="../assets/svgs/ic-arrow-downright-light.svg" class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
-                            <img src="../assets/svgs/layer-light.svg" class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0" alt="">
+                            <img src="../assets/svgs/ic-arrow-downright-light.svg"
+                                class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
+                            <img src="../assets/svgs/layer-light.svg"
+                                class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                alt="">
                             <!-- Line stick -->
-                            <span class="h-[140px] w-[3px] lg:w-[6px] bg-turquoise-500 absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
+                            <span
+                                class="h-[140px] w-[3px] lg:w-[6px] bg-turquoise-500 absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
                         </a>
                         <p class="text-lg text-white coolvetica-book">
                             /#speakers
@@ -95,7 +103,8 @@
                 </div>
 
                 <!-- Date -->
-                <div class="text-turquoise-500 mt-[70px] md:mt-[50px] px-0 flex flex-col items-start w-max justify-end ml-auto mb-[134px] lg:mb-0">
+                <div
+                    class="text-turquoise-500 mt-[70px] md:mt-[50px] px-0 flex flex-col items-start w-max justify-end ml-auto mb-[134px] lg:mb-0">
                     <p class="mb-2 text-xl md:text-2xl coolvetica-bold">_when/where</p>
                     <p class="text-[30px] leading-[38px] md:text-[48px] md:leading-[44px] coolvetica-bold">
                         27_09_2023_ <br>
@@ -105,10 +114,12 @@
             </div>
         </section>
 
-        <section id="speakers" class="relative bg-turquoise-500 border-b-[16px] lg:border-b-[35px] border-dark-teal min-h-screen">
+        <section id="speakers"
+            class="relative bg-turquoise-500 border-b-[16px] lg:border-b-[35px] border-dark-teal min-h-screen">
             <div class="relative pb-[160px] lg:py-[128px] pt-12">
                 <div class="container lg:px-[100px] lg:mb-[52px] mb-12 px-[18px]">
-                    <h3 class="text-dark-teal coolvetica-bold text-[48px] leading-[44px] md:text-[84px] md:leading-[90px] tracking-[-0.02em]">
+                    <h3
+                        class="text-dark-teal coolvetica-bold text-[48px] leading-[44px] md:text-[84px] md:leading-[90px] tracking-[-0.02em]">
                         _speakers
                     </h3>
                 </div>
@@ -116,12 +127,14 @@
                 <div class="lg:ml-[100px] relative">
                     <div id="speakerCards">
                         <!-- Card - Speaker 1 -->
-                        <div class="flex flex-col mr-4 lg:mr-12 w-full max-w-[274px] lg:max-w-[374px] group lg:even:mt-11">
+                        <div
+                            class="flex flex-col mr-4 lg:mr-12 w-full max-w-[274px] lg:max-w-[374px] group lg:even:mt-11">
                             <a href="#" class="w-full h-full">
                                 <img src="../assets/images/speaker-1.png"
                                     class="w-full h-[290px] md:h-[363px] object-cover top-left-triangle" alt="">
                             </a>
-                            <div class="pt-[22px] pb-6 lg:pt-10 lg:px-11 lg:pb-11 px-6 bg-dark-teal group bottom-right-triangle-sm">
+                            <div
+                                class="pt-[22px] pb-6 lg:pt-10 lg:px-11 lg:pb-11 px-6 bg-dark-teal group bottom-right-triangle-sm">
                                 <a href="#" class="w-max">
                                     <h5
                                         class="md:max-w-[280px] w-max md:w-full relative coolvetica-regular text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] text-turquoise-500">
@@ -152,12 +165,14 @@
                         </div>
 
                         <!-- Card - Speaker 2 -->
-                        <div class="flex flex-col mr-4 lg:mr-12 w-full max-w-[274px] lg:max-w-[374px] group lg:even:mt-11">
+                        <div
+                            class="flex flex-col mr-4 lg:mr-12 w-full max-w-[274px] lg:max-w-[374px] group lg:even:mt-11">
                             <a href="#" class="w-full h-full">
                                 <img src="../assets/images/speaker-2.png"
                                     class="w-full h-[290px] md:h-[363px] object-cover top-left-triangle" alt="">
                             </a>
-                            <div class="pt-[22px] pb-6 lg:pt-10 lg:px-11 lg:pb-11 px-6 bg-dark-teal group bottom-right-triangle-sm">
+                            <div
+                                class="pt-[22px] pb-6 lg:pt-10 lg:px-11 lg:pb-11 px-6 bg-dark-teal group bottom-right-triangle-sm">
                                 <a href="#" class="w-max">
                                     <h5
                                         class="md:max-w-[280px] w-max md:w-full relative coolvetica-regular text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] text-turquoise-500">
@@ -188,12 +203,14 @@
                         </div>
 
                         <!-- Card - Speaker 3 -->
-                        <div class="flex flex-col mr-4 lg:mr-12 w-full max-w-[274px] lg:max-w-[374px] group lg:even:mt-11">
+                        <div
+                            class="flex flex-col mr-4 lg:mr-12 w-full max-w-[274px] lg:max-w-[374px] group lg:even:mt-11">
                             <a href="#" class="w-full h-full">
                                 <img src="../assets/images/speaker-3.png"
                                     class="w-full h-[290px] md:h-[363px] object-cover top-left-triangle" alt="">
                             </a>
-                            <div class="pt-[22px] pb-6 lg:pt-10 lg:px-11 lg:pb-11 px-6 bg-dark-teal group bottom-right-triangle-sm">
+                            <div
+                                class="pt-[22px] pb-6 lg:pt-10 lg:px-11 lg:pb-11 px-6 bg-dark-teal group bottom-right-triangle-sm">
                                 <a href="#" class="w-max">
                                     <h5
                                         class="md:max-w-[280px] w-max md:w-full relative coolvetica-regular text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] text-turquoise-500">
@@ -224,12 +241,14 @@
                         </div>
 
                         <!-- Card - Proposal -->
-                        <div class="flex flex-col mr-4 lg:mr-12 w-full max-w-[274px] lg:max-w-[374px] group lg:even:mt-11">
+                        <div
+                            class="flex flex-col mr-4 lg:mr-12 w-full max-w-[274px] lg:max-w-[374px] group lg:even:mt-11">
                             <a href="#" class="w-full h-full">
                                 <img src="../assets/images/default-avatar.png"
                                     class="w-full h-[290px] md:h-[363px] object-cover top-left-triangle" alt="">
                             </a>
-                            <div class="pt-[22px] pb-6 lg:pt-10 lg:px-11 lg:pb-11 px-6 bg-dark-teal group bottom-right-triangle-sm">
+                            <div
+                                class="pt-[22px] pb-6 lg:pt-10 lg:px-11 lg:pb-11 px-6 bg-dark-teal group bottom-right-triangle-sm">
                                 <a href="#" class="w-max">
                                     <h5
                                         class="md:max-w-[280px] w-max md:w-full relative coolvetica-regular text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] text-turquoise-500">
@@ -265,14 +284,18 @@
                     <div class="absolute -translate-y-1/2 top-1/2 lg:right-[200px]" id="pseudoNextSlide">
                         <a href="javascript:void(0);" class="relative group">
                             <img src="../assets/svgs/ic-arrow-right.svg" class="relative z-20" alt="">
-                            <img src="../assets/svgs/layer-light.svg" class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0" alt="">
+                            <img src="../assets/svgs/layer-light.svg"
+                                class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                alt="">
                         </a>
                     </div>
                     <!-- Trigger Prev -->
                     <div class="absolute hidden -translate-y-1/2 top-1/2 lg:left-32" id="pseudoPrevSlide">
                         <a href="javascript:void(0);" class="relative group">
                             <img src="../assets/svgs/ic-arrow-left.svg" class="relative z-20" alt="">
-                            <img src="../assets/svgs/layer-light.svg" class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0" alt="">
+                            <img src="../assets/svgs/layer-light.svg"
+                                class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                alt="">
                         </a>
                     </div>
                 </div>
@@ -282,10 +305,14 @@
                     <div class="absolute translate-y-10 -bottom-[70px] left-4 lg:static">
                         <div class="flex items-end gap-[35px]">
                             <a href="#event-schedule" class="relative group">
-                                <img src="../assets/svgs/ic-arrow-downright-dark.svg" class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
-                                <img src="../assets/svgs/layer-dark.svg" class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0" alt="">
+                                <img src="../assets/svgs/ic-arrow-downright-dark.svg"
+                                    class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
+                                <img src="../assets/svgs/layer-dark.svg"
+                                    class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                    alt="">
                                 <!-- Line stick -->
-                                <span class="h-[140px] w-[3px] lg:w-[6px] bg-dark-teal absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
+                                <span
+                                    class="h-[140px] w-[3px] lg:w-[6px] bg-dark-teal absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
                             </a>
                             <p class="text-lg text-dark-teal coolvetica-book">
                                 /#event-schedule
@@ -491,10 +518,14 @@
                     <div class="absolute translate-y-10 -bottom-[70px] left-4 lg:static">
                         <div class="flex items-end gap-[35px]">
                             <a href="#book-tickets" class="relative group">
-                                <img src="../assets/svgs/ic-arrow-downright-dark.svg" class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
-                                <img src="../assets/svgs/layer-dark.svg" class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0" alt="">
+                                <img src="../assets/svgs/ic-arrow-downright-dark.svg"
+                                    class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
+                                <img src="../assets/svgs/layer-dark.svg"
+                                    class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                    alt="">
                                 <!-- Line stick -->
-                                <span class="h-[140px] w-[3px] lg:w-[6px] bg-dark-teal absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
+                                <span
+                                    class="h-[140px] w-[3px] lg:w-[6px] bg-dark-teal absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
                             </a>
                             <p class="text-lg text-dark-teal coolvetica-book">
                                 /#book-tickets
@@ -524,7 +555,7 @@
                 </a>
             </div>
 
-            <div class="container relative pt-6 md:pt-[128px] pb-12 md:pb-[114px] lg:px-[100px] flex flex-col">
+            <div class="container relative pt-6 md:pt-[128px] pb-8 md:pb-[114px] lg:px-[100px] flex flex-col">
                 <div class="flex-col flex-items-center md:flex-row">
                     <!-- Mail To -->
                     <div class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[136px] w-full md:w-max">
@@ -532,10 +563,11 @@
                             <img src="../assets/svgs/ic-arrow-upright.svg" alt="">
                         </div>
                         <div class="flex flex-col w-full group md:w-max">
-                            <div class="flex flex-row md:flex-col gap-[13px] items-center md:items-start pb-[13px]">
+                            <div class="flex flex-row md:flex-col gap-x-[13px] items-center md:items-start pb-[13px]">
                                 <label for=""
                                     class="text-turquoise-500 coolvetica-regular text-lg md:text-[20px] md:leading-[30px]">mailto:</label>
-                                <a href="mailto:hello@webstack.com" class="text-white md:text-turquoise-500 text-xl md:text-[48px] md:leading-[44px] tracking-[-0.02em] coolvetica-regular">
+                                <a href="mailto:hello@webstack.com"
+                                    class="text-white md:text-turquoise-500 text-xl md:text-[48px] md:leading-[44px] tracking-[-0.02em] coolvetica-regular">
                                     hello@webstack.com
                                 </a>
                             </div>
@@ -549,14 +581,20 @@
                     </div>
 
                     <!-- partner 1 -->
-                    <div class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[82px]">
+                    <div class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[82px] w-full md:w-max">
                         <div class="w-fit md:h-[60px] py-[15px]">
                             <img src="../assets/svgs/ic-arrow-upright-upload.svg" alt="">
                         </div>
-                        <div class="flex flex-col group w-max">
-                            <label for=""
-                                class="text-turquoise-500 coolvetica-regular text-[20px] leading-[30px]">rel='partner'</label>
-                            <img src="../assets/svgs/partner-brackets-turquoise.svg" class="mb-[13px] mt-[14px]" alt="">
+                        <div class="flex flex-col w-full group md:w-max">
+                            <div class="flex flex-row md:flex-col gap-x-[13px] items-center md:items-start pb-[13px]">
+                                <label for=""
+                                    class="text-turquoise-500 coolvetica-regular text-lg md:text-[20px] md:leading-[30px]">rel='partner'</label>
+                                <!-- Desktop icon -->
+                                <img src="../assets/svgs/partner-brackets-turquoise.svg"
+                                    class="mt-[14px] hidden md:block" alt="">
+                                <!-- Mobile icon -->
+                                <img src="../assets/svgs/partner-brackets.svg" class="block md:hidden" alt="">
+                            </div>
                             <!-- bottom line -->
                             <div class="relative bg-[#17a68c] w-full h-[3px]">
                                 <div
@@ -567,14 +605,20 @@
                     </div>
 
                     <!-- partner 2 -->
-                    <div class="inline-flex gap-[31px] items-end md:mr-12 lg:mr-[82px] last:mr-0">
+                    <div class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[82px] w-full md:w-max">
                         <div class="w-fit md:h-[60px] py-[15px]">
                             <img src="../assets/svgs/ic-arrow-upright-upload.svg" alt="">
                         </div>
-                        <div class="flex flex-col group w-max">
-                            <label for=""
-                                class="text-turquoise-500 coolvetica-regular text-[20px] leading-[30px]">rel='partner'</label>
-                            <img src="../assets/svgs/partner-theshop-turquoise.svg" class="mb-[13px] mt-[14px]" alt="">
+                        <div class="flex flex-col w-full group md:w-max">
+                            <div class="flex flex-row md:flex-col gap-x-[13px] items-center md:items-start pb-[13px]">
+                                <label for=""
+                                    class="text-turquoise-500 coolvetica-regular text-lg md:text-[20px] md:leading-[30px]">rel='partner'</label>
+                                <!-- Desktop icon -->
+                                <img src="../assets/svgs/partner-theshop-turquoise.svg"
+                                    class="mt-[14px] hidden md:block" alt="">
+                                <!-- Mobile icon -->
+                                <img src="../assets/svgs/partner-theshop.svg" class="block md:hidden" alt="">
+                            </div>
                             <!-- bottom line -->
                             <div class="relative bg-[#17a68c] w-full h-[3px]">
                                 <div
@@ -585,11 +629,13 @@
                     </div>
                 </div>
 
-                <footer
-                    class="py-[7px] flex items-center justify-between mt-12 md:mt-[83px] gap-6 flex-col-reverse md:flex-row">
-                    <div class="inline-flex gap-12">
-                        <p class="text-lg text-turquoise-500 coolvetica-book">© Webstack 2023. All rights reserved.</p>
-                        <a href="#" class="text-lg text-white coolvetica-book">
+                <footer class="flex items-center justify-between mt-12 md:mt-[83px] gap-6 flex-col-reverse md:flex-row">
+                    <div class="inline-flex justify-between w-full gap-12 md:w-max">
+                        <p class="text-base md:text-lg text-turquoise-500 coolvetica-book">
+                            © Webstack 2023. <span class="hidden md:inline">All rights reserved.</span>
+
+                        </p>
+                        <a href="#" class="text-base text-white md:text-lg coolvetica-book">
                             /privacy-policy
                         </a>
                     </div>
@@ -620,6 +666,38 @@
             // Init AOS animate
             AOS.init();
 
+            // Navigation config
+            $(document).ready(function () {
+                $("#mobileToggler").each(function (_, navToggler) {
+                    var target = $(navToggler).data("target");
+                    $(navToggler).on("click", function (e) {
+                        // Animate top to bottom
+                        // $(target).animate({
+                        //     height: "toggle",
+                        // })
+
+                        // Animate left to right (element must have properties "left: 100%"")
+                        $(target).toggleClass('!left-0')
+
+                        // Animate the nav toggler to "X"
+                        $('#' + e.currentTarget.id).toggleClass('toggled')
+                        $('body').toggleClass('overflow-y-hidden')
+                    })
+                })
+
+                // Trigger close mobile navigation
+                $('.nav-link, #bookTicketBtn').on('click', () => {
+                    $('body').removeClass('overflow-y-hidden')
+                    $('#mobileToggler').removeClass('toggled')
+                    $('#__navMenus').removeClass('!left-0')
+                })
+
+                $(window).on('scroll', () => {
+                    // console.log($(window).scrollTop())
+                    console.log($('#navigationBar').height())
+                })
+            })
+
             const prevNextButtons = $(window).width > 991 ? true : false
 
             $('#speakerCards').flickity({
@@ -648,22 +726,22 @@
 
             pseudoNextEl.on('click', (e) => {
                 nextEl.trigger('click')
-                if(prevEl[0].getAttribute('disabled') == null) {
+                if (prevEl[0].getAttribute('disabled') == null) {
                     pseudoPrevEl.removeClass('hidden')
                 }
 
-                if(nextEl[0].getAttribute('disabled') != null) {
-                    $('#'+e.currentTarget.id).addClass('hidden')
+                if (nextEl[0].getAttribute('disabled') != null) {
+                    $('#' + e.currentTarget.id).addClass('hidden')
                 }
             })
 
             pseudoPrevEl.on('click', (e) => {
                 prevEl.trigger('click')
-                if(prevEl[0].getAttribute('disabled') != null) {
-                    $('#'+e.currentTarget.id).addClass('hidden')
+                if (prevEl[0].getAttribute('disabled') != null) {
+                    $('#' + e.currentTarget.id).addClass('hidden')
                 }
 
-                if(nextEl[0].getAttribute('disabled') == null) {
+                if (nextEl[0].getAttribute('disabled') == null) {
                     pseudoNextEl.removeClass('hidden')
                 }
             })

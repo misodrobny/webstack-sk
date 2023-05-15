@@ -77,6 +77,18 @@
 }
 
 @layer utilities {
+    #mobileToggler {
+        @apply absolute right-0 top-[37px] z-40 p-2 mr-5 block lg:hidden
+    }
+
+    #mobileToggler .child {
+        @apply w-6 h-[3px] bg-turquoise-500 first:mb-[10px] transition-all
+    }
+
+    #mobileToggler.toggled .child {
+        @apply first:rotate-45 [&:nth-child(2)]:-rotate-45 first:origin-[10%] [&:nth-child(2)]:origin-[10%]
+    }
+
     .top-left-triangle {
         clip-path: polygon(54% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 53%);
     }
