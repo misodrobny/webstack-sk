@@ -18,13 +18,14 @@
 
     <body>
 
-        <nav id="navigationBar" class="lg:py-8">
+        <nav id="navigationBar" class="top-0 z-20 w-full transition-all lg:py-8">
             <div class="container flex flex-col items-center w-full lg:justify-between lg:flex-row">
                 <!-- App Logo & Mobile nav toggler -->
                 <div class="relative inline-flex items-center justify-between w-full py-4 lg:w-auto lg:py-0">
                     <!-- Logo -->
                     <a href="/public/html/index.html">
-                        <img src="../assets/svgs/logo.svg" class="w-[65px] h-[75px] lg:w-auto lg:h-full" alt="">
+                        <img src="../assets/svgs/logo.svg" class="w-[65px] h-[75px] lg:w-auto lg:h-full transition-all"
+                            id="__appLogo" alt="">
                     </a>
                     <a href="javascript:void(0);" id="mobileToggler" data-target="#__navMenus">
                         <div class="child"></div>
@@ -33,7 +34,7 @@
                 </div>
 
                 <!-- Nav Menu - Hidden on mobile -->
-                <div class="absolute top-0 z-30 pt-[22px] lg:pt-0 pl-8 lg:pl-0 lg:z-0 lg:static border-l-[16px] border-l-turquoise-500 lg:border-none bg-dark-teal lg:bg-transparent overflow-y-auto w-full h-full lg:w-auto lg:h-auto left-full lg:left-0 transition-all duration-300"
+                <div class="hidden lg:block absolute top-0 z-30 pt-[22px] lg:pt-0 pl-8 lg:pl-0 lg:static border-l-[16px] border-l-turquoise-500 lg:border-none bg-dark-teal lg:bg-transparent overflow-y-auto w-full h-full lg:w-auto lg:h-auto left-full lg:left-0 transition-all duration-300"
                     id="__navMenus">
                     <div class="flex flex-col gap-8 lg:items-center lg:flex-row">
                         <div class="inline-flex items-center lg:hidden">
@@ -60,11 +61,14 @@
                 </div>
             </div>
         </nav>
+        <!-- Has the same height with navigation bar -->
+        <div class="pb-[204px] hidden" id="pseudoTopElement"></div>
 
         <section id="start"
-            class="container relative min-h-screen pb-[128px] lg:px-[100px] overflow-hidden lg:overflow-visible">
+            class="container relative min-h-screen pb-[128px] xl:px-[180px] overflow-hidden lg:overflow-visible">
             <!-- Big W -->
-            <div class="absolute top-10 -right-[104px] md:-top-[300px] md:right-20 -z-10">
+            <div class="absolute top-10 -right-[104px] lg:-top-[320px] lg:right-20 -z-10" id="innerW" data-aos="zoom-in-up"
+                data-aos-delay="300" data-aos-duration="600">
                 <svg width="909" height="850" class="w-[356px] h-[333px] md:w-full md:h-full " viewBox="0 0 909 850"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -662,22 +666,43 @@
             integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="../assets/scripts/3dEffect.js"></script>
         <script>
             // Init AOS animate
             AOS.init();
 
-            // Navigation config
+            // NavigationBar config
+            let navigationBar = $('#navigationBar')
+            function navCss(topValue) {
+                navigationBar.css({
+                    top: topValue,
+                    transition: "top 300ms linear",
+                    width: "100%"
+                });
+            }
             $(document).ready(function () {
                 $("#mobileToggler").each(function (_, navToggler) {
-                    var target = $(navToggler).data("target");
+                    let isOpen = false
+                    let target = $(navToggler).data("target");
                     $(navToggler).on("click", function (e) {
                         // Animate top to bottom
                         // $(target).animate({
                         //     height: "toggle",
                         // })
+                        isOpen = !isOpen
 
+                        if(!isOpen) {
+                            setTimeout(() => {
+                                $(target).toggleClass('hidden')
+                            }, 400);
+                        } else {
+                            $(target).toggleClass('hidden')
+                        }
+                        console.log(isOpen)
                         // Animate left to right (element must have properties "left: 100%"")
-                        $(target).toggleClass('!left-0')
+                        setTimeout(() => {
+                            $(target).toggleClass('!left-0')
+                        }, 100);
 
                         // Animate the nav toggler to "X"
                         $('#' + e.currentTarget.id).toggleClass('toggled')
@@ -690,11 +715,31 @@
                     $('body').removeClass('overflow-y-hidden')
                     $('#mobileToggler').removeClass('toggled')
                     $('#__navMenus').removeClass('!left-0')
+                    $('#__navMenus').addClass('hidden')
                 })
 
-                $(window).on('scroll', () => {
-                    // console.log($(window).scrollTop())
-                    console.log($('#navigationBar').height())
+                // navigation bar onScroll Effect
+                $(window).on('scroll', (w) => {
+                    if ($(window).width() > 991) {
+                        if ($(window).scrollTop() > navigationBar.height() + 64) {
+                            $('#__appLogo').css({
+                                maxHeight: '70px',
+                                maxWidth: '80px'
+                            })
+                            $('#pseudoTopElement').removeClass('hidden')
+                            navigationBar.addClass('fixed')
+                            navigationBar.addClass('bg-dark-teal')
+                            // navCss('-150px')
+                            // setTimeout(() => {
+                            //     navCss('0')
+                            // }, 400);
+                        } else {
+                            $('#pseudoTopElement').addClass('hidden')
+                            $('#__appLogo').removeAttr("style")
+                            navigationBar.removeClass('fixed')
+                            navigationBar.removeClass('bg-dark-teal')
+                        }
+                    }
                 })
             })
 
@@ -745,6 +790,18 @@
                     pseudoNextEl.removeClass('hidden')
                 }
             })
+
+            // scroll helper
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    if (this.getAttribute("href") != "#" && this.getAttribute("href") != "#!") {
+                        document.querySelector(this.getAttribute("href")).scrollIntoView({
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
         </script>
     </body>
 
