@@ -84,4 +84,14 @@
     .bottom-right-triangle-sm {
         clip-path: polygon(100.3% 0%, 100% 77.4%, 82.8% 100.3%, 0% 100.3%, 0% 0%);
     }
+
+    @media screen and (max-width: 575px) {
+        .top-left-triangle {
+            clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);
+        }
+
+        #speakerCards .bottom-right-triangle-sm {
+            clip-path: none;
+        }
+    }
 }
