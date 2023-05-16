@@ -68,25 +68,25 @@
 
 @layer components {
     .nav-link {
-        @apply px-2 pt-1 pb-2 text-2xl lg: text-center text-white bg-dark-teal coolvetica-regular hover:underline underline-offset-8 hover:text-turquoise-100 focus:text-turquoise-100
+        @apply px-2 pt-1 pb-2 text-2xl lg:text-center text-white bg-dark-teal coolvetica-regular hover:underline underline-offset-8 hover:text-turquoise-100 focus:text-turquoise-100
     }
 
     .btn-primary {
-        @apply px-6 py-3 text-xl transition-all bg-white rounded-full text-dark-teal coolvetica-bold hover: bg-turquoise-100 focus:bg-turquoise-100
+        @apply px-6 py-3 text-xl transition-all bg-white rounded-full text-dark-teal coolvetica-bold hover:bg-turquoise-100 focus:bg-turquoise-100
     }
 }
 
 @layer utilities {
     #mobileToggler {
-        @apply absolute right-0 top-[37px] z-40 p-2 mr-5 block lg: hidden
+        @apply absolute right-0 top-[37px] z-40 p-2 mr-5 block lg:hidden
     }
 
     #mobileToggler .child {
-        @apply w-6 h-[3px] bg-turquoise-500 first: mb-[10px] transition-all
+        @apply w-6 h-[3px] bg-turquoise-500 first:mb-[10px] transition-all
     }
 
     #mobileToggler.toggled .child {
-        @apply first: rotate-45 [&:nth-child(2)]:-rotate-45 first:origin-[10%] [&:nth-child(2)]:origin-[10%]
+        @apply first:rotate-45 [&:nth-child(2)]:-rotate-45 first:origin-[10%] [&:nth-child(2)]:origin-[10%]
     }
 
     #start {
