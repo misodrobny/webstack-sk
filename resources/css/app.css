@@ -74,6 +74,46 @@
     .btn-primary {
         @apply px-6 py-3 text-xl transition-all bg-white rounded-full text-dark-teal coolvetica-bold hover:bg-turquoise-100 focus:bg-turquoise-100
     }
+
+    #__modal-container {
+        @apply fixed table h-full w-full top-0 left-0 scale-0 z-[999]
+    }
+
+    /* modal animation */
+    #__modal-container.animation-unfolding {
+        @apply scale-y-[0.01] scale-x-0;
+        animation:unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+
+    #__modal-container.animation-unfolding .modal-background .modal-body {
+        transform:scale(0);
+        animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+
+    #__modal-container.animation-unfolding.out {
+        transform:scale(1);
+        animation:unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+
+    #__modal-container.animation-unfolding.out .modal-background .modal-body {
+        animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+
+    #__modal-container .modal-background {
+        @apply bg-dark-teal table-cell w-full
+    }
+
+    #__modal-container .modal-content {
+        @apply pt-16 pb-[95px] relative z-20
+    }
+
+    #__modal-container .modal-header {
+        @apply flex items-center justify-between mb-10 md:mb-20 container
+    }
+
+    #__modal-container .modal-body {
+        @apply bg-turquoise-500 relative p-7 md:p-20 w-full max-w-[710px] mx-auto
+    }
 }
 
 @layer utilities {
@@ -113,6 +153,48 @@
 
         #speakerCards .bottom-right-triangle-sm {
             clip-path: none;
+        }
+    }
+
+    @keyframes unfoldIn {
+        0% {
+            transform:scaleY(.005) scaleX(0);
+        }
+        50% {
+            transform:scaleY(.005) scaleX(1);
+        }
+        100% {
+            transform:scaleY(1) scaleX(1);
+        }
+    }
+
+    @keyframes unfoldOut {
+        0% {
+            transform:scaleY(1) scaleX(1);
+        }
+        50% {
+            transform:scaleY(.005) scaleX(1);
+        }
+        100% {
+            transform:scaleY(.005) scaleX(0);
+        }
+    }
+
+    @keyframes zoomIn {
+        0% {
+            transform:scale(0);
+        }
+        100% {
+            transform:scale(1);
+        }
+    }
+
+    @keyframes zoomOut {
+        0% {
+            transform:scale(1);
+        }
+        100% {
+            transform:scale(0);
         }
     }
 }

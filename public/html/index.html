@@ -53,7 +53,7 @@
                         <a href="#event-schedule" class="nav-link">
                             /#event-schedule
                         </a>
-                        <a href="#" class="nav-link">
+                        <a href="#" class="nav-link" data-propose-talk>
                             /?propose-a-talk
                         </a>
                         <a href="#book-tickets" class="btn-primary w-max" id="bookTicketBtn">
@@ -310,7 +310,7 @@
                                 </p>
 
                                 <div class="mt-6">
-                                    <a href="#" class="py-1 text-xl text-white md:text-2xl coolvetica-regular">
+                                    <a href="#" data-propose-talk class="py-1 text-xl text-white md:text-2xl coolvetica-regular">
                                         /?propose-a-talk
                                     </a>
                                 </div>
@@ -749,7 +749,7 @@
                     </div>
 
                     <!-- partner 1 -->
-                    <div class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[82px] w-full md:w-max">
+                    <a rel="partner" href="https://brackets.io/" class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[82px] w-full md:w-max">
                         <div class="w-fit md:h-[60px] py-[15px]">
                             <img src="../assets/svgs/ic-arrow-upright-upload.svg" alt="">
                         </div>
@@ -770,10 +770,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- partner 2 -->
-                    <div class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[82px] w-full md:w-max">
+                    <a rel="partner" href="https://www.theshop.dev/" class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[82px] w-full md:w-max">
                         <div class="w-fit md:h-[60px] py-[15px]">
                             <img src="../assets/svgs/ic-arrow-upright-upload.svg" alt="">
                         </div>
@@ -794,7 +794,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <footer class="flex items-center justify-between mt-12 md:mt-[83px] gap-6 flex-col-reverse md:flex-row">
@@ -824,6 +824,43 @@
                         </a>
                     </div>
                 </footer>
+            </div>
+        </section>
+
+        <!-- Modal Propose Talk -->
+        <section id="__modal-container">
+            <div class="modal-background">
+                <div class="h-full overflow-y-auto modal-content">
+                    <div class="modal-header">
+                        <h3
+                        class="text-turquoise-500 coolvetica-bold text-[48px] leading-[44px] md:text-[84px] md:leading-[90px] tracking-[-0.02em]">
+                            _propose-a-talk
+                        </h3>
+                        <a href="javascript:void(0);" id="close-propose-talk" class="relative group">
+                            <img src="../assets/svgs/ic-close.svg" class="relative z-20 w-16 h-16 lg:w-auto lg:h-auto" alt="">
+                            <img src="../assets/svgs/layer-light.svg"
+                                class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                alt="">
+                        </a>
+                    </div>
+                    <div class="modal-body" style="clip-path: polygon(100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 0%);">
+                        <p class="coolvetica-book text-lg md:text-xl md:leading-[30px] mb-10 text-dark-teal">
+                            Calling Laravel experts and software developers! Share your insights and experiences with us. <span class="coolvetica-bold">Submit your talk proposal today for a chance to speak at our conference!</span>
+                        </p>
+                        <form action="" class="flex flex-col gap-10">
+                            <input type="text" name="name" id="name" placeholder="First and last name" class="outline-none py-[17px] coolvetica-regular text-xl text-dark-teal bg-transparent border-b-[3px] border-b-dark-teal placeholder-dark-teal">
+                            <div class="grid gap-10 md:grid-cols-2">
+                                <input type="email" name="email" id="email" placeholder="E-mail" class="outline-none py-[17px] coolvetica-regular text-xl text-dark-teal bg-transparent border-b-[3px] border-b-dark-teal placeholder-dark-teal">
+                                <input type="text" name="twitter" id="twitter" placeholder="Twitter" class="outline-none py-[17px] coolvetica-regular text-xl text-dark-teal bg-transparent border-b-[3px] border-b-dark-teal placeholder-dark-teal">
+                            </div>
+                            <input type="text" name="topic" id="topic" placeholder="Topic" class="outline-none py-[17px] coolvetica-regular text-xl text-dark-teal bg-transparent border-b-[3px] border-b-dark-teal placeholder-dark-teal">
+                            <textarea name="abstract" id="" rows="3" class="outline-none py-[17px] coolvetica-regular text-xl text-dark-teal bg-transparent border-b-[3px] border-b-dark-teal placeholder-dark-teal" placeholder="Abstract"></textarea>
+                            <button type="submit" class="px-6 py-3 bg-white coolvetica-bold text-dark-teal w-max">
+                                type='submit'
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -978,6 +1015,17 @@
                     $('.fancybox__backdrop').addClass('!bg-dark-teal')
                 }, 100);
             })
+
+            // Modal JS
+            $('[data-propose-talk]').click(function(){
+                $('#__modal-container').removeAttr('class').addClass('animation-unfolding');
+                $('body').addClass('overflow-hidden');
+            })
+
+            $('#close-propose-talk').click(function(){
+                $('#__modal-container').addClass('out');
+                $('body').removeClass('overflow-hidden');
+            });
 
             // scroll helper
             document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
