@@ -9,7 +9,7 @@
 
         <link rel="shortcut icon" href="{{ asset('assets/svgs/app-logo.svg') }}" type="image/x-icon">
 
-        <link rel="stylesheet" href="{{ asset('style/main.css') }}">
+        @vite('resources/css/app.css')
 
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">

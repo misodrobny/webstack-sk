@@ -16,7 +16,7 @@
     /* Book - Bk */
     @font-face {
         font-family: 'Coolvetica Bk';
-        src: url('../assets/font-coolvetica/CoolveticaBk-Regular.woff2') format('woff2');
+        src: url('/public/assets/font-coolvetica/CoolveticaBk-Regular.woff2') format('woff2');
         font-weight: normal;
         font-style: normal;
     }
@@ -24,7 +24,7 @@
     /* Regular */
     @font-face {
         font-family: 'Coolvetica Rg';
-        src: url('../assets/font-coolvetica/CoolveticaRg-Regular.woff2') format('woff2');
+        src: url('/public/assets/font-coolvetica/CoolveticaRg-Regular.woff2') format('woff2');
         font-weight: normal;
         font-style: normal;
     }
@@ -32,7 +32,7 @@
     /* Bold */
     @font-face {
         font-family: 'Coolvetica Bold';
-        src: url('../assets/font-coolvetica/CoolveticaRg-Bold.woff2') format('woff2');
+        src: url('/public/assets/font-coolvetica/CoolveticaRg-Bold.woff2') format('woff2');
         font-weight: bold;
         font-style: normal;
     }
@@ -40,7 +40,7 @@
     /* Heavy */
     @font-face {
         font-family: 'Coolvetica Hv';
-        src: url('../assets/font-coolvetica/CoolveticaHv-Regular.woff2') format('woff2');
+        src: url('/public/assets/font-coolvetica/CoolveticaHv-Regular.woff2') format('woff2');
         font-weight: 800;
         font-style: normal;
     }

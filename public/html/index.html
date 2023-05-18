@@ -9,6 +9,41 @@
 
         <link rel="shortcut icon" href="../assets/svgs/app-logo.svg" type="image/x-icon">
 
+        <!-- Font configuration -->
+        <style>
+            /* Book - Bk */
+            @font-face {
+                font-family: 'Coolvetica Bk';
+                src: url('/public/assets/font-coolvetica/CoolveticaBk-Regular.woff2') format('woff2');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            /* Regular */
+            @font-face {
+                font-family: 'Coolvetica Rg';
+                src: url('/public/assets/font-coolvetica/CoolveticaRg-Regular.woff2') format('woff2');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            /* Bold */
+            @font-face {
+                font-family: 'Coolvetica Bold';
+                src: url('/public/assets/font-coolvetica/CoolveticaRg-Bold.woff2') format('woff2');
+                font-weight: bold;
+                font-style: normal;
+            }
+
+            /* Heavy */
+            @font-face {
+                font-family: 'Coolvetica Hv';
+                src: url('/public/assets/font-coolvetica/CoolveticaHv-Regular.woff2') format('woff2');
+                font-weight: 800;
+                font-style: normal;
+            }
+        </style>
+
         <link rel="stylesheet" href="../style/main.css">
         <link rel="stylesheet" href="../style/autoSlideAnimation.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -134,7 +169,7 @@
                             <span
                                 class="h-[140px] w-[3px] lg:w-[6px] bg-turquoise-500 absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
                         </a>
-                        <p class="text-lg text-white coolvetica-book">
+                        <p class="text-lg text-white select-none coolvetica-book">
                             /#speakers
                         </p>
                     </div>
@@ -351,7 +386,7 @@
                             <span
                                 class="h-[140px] w-[3px] lg:w-[6px] bg-dark-teal absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
                         </a>
-                        <p class="text-lg text-dark-teal coolvetica-book">
+                        <p class="text-lg select-none text-dark-teal coolvetica-book">
                             /#event-schedule
                         </p>
                     </div>
@@ -490,7 +525,7 @@
                             <span
                                 class="h-[140px] w-[3px] lg:w-[6px] bg-dark-teal absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
                         </a>
-                        <p class="text-lg text-dark-teal coolvetica-book">
+                        <p class="text-lg select-none text-dark-teal coolvetica-book">
                             /#book-tickets
                         </p>
                     </div>
@@ -701,7 +736,7 @@
                             <span
                                 class="h-[140px] w-[3px] lg:w-[6px] bg-dark-teal absolute top-full left-1/2 -translate-x-1/2 z-0"></span>
                         </a>
-                        <p class="text-lg text-dark-teal coolvetica-book">
+                        <p class="text-lg select-none text-dark-teal coolvetica-book">
                             /#book-tickets
                         </p>
                     </div>
