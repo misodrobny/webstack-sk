@@ -64,3 +64,60 @@
         ])
     </div>
 </section>
+
+@push('scripts')
+    <script type="text/javascript">
+        const prevNextButtons = $(window).width() > 991 ? true : false
+        // const isDraggable = $(window).width() < 991 ? true : false
+
+        $('#speakerCards').flickity({
+            cellAlign: 'center',
+            contain: true,
+            pageDots: false,
+            imagesLoaded: true,
+            prevNextButtons: prevNextButtons
+        })
+
+        // $('#speakerCards .flickity-viewport').css({
+        //     overflow: 'visible'
+        // })
+
+        // $('#speakerCards .flickity-slider').css({
+        //     marginLeft: '16px'
+        // })
+
+        $('#speakerCards .flickity-prev-next-button').addClass('!opacity-0')
+
+        let prevEl = $('#speakerCards .flickity-prev-next-button.previous')
+        let nextEl = $('#speakerCards .flickity-prev-next-button.next')
+        let pseudoNextEl = $('#pseudoNextSlide')
+        let pseudoPrevEl = $('#pseudoPrevSlide').addClass('hidden')
+
+        if (prevNextButtons === false) {
+            pseudoNextEl.addClass('hidden')
+            pseudoPrevEl.addClass('hidden')
+        }
+
+        pseudoNextEl.on('click', (e) => {
+            nextEl.trigger('click')
+            if (prevEl[0].getAttribute('disabled') == null) {
+                pseudoPrevEl.removeClass('hidden')
+            }
+
+            if (nextEl[0].getAttribute('disabled') != null) {
+                $('#' + e.currentTarget.id).addClass('hidden')
+            }
+        })
+
+        pseudoPrevEl.on('click', (e) => {
+            prevEl.trigger('click')
+            if (prevEl[0].getAttribute('disabled') != null) {
+                $('#' + e.currentTarget.id).addClass('hidden')
+            }
+
+            if (nextEl[0].getAttribute('disabled') == null) {
+                pseudoNextEl.removeClass('hidden')
+            }
+        })
+    </script>
+@endpush
