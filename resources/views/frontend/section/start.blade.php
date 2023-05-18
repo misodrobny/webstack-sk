@@ -22,7 +22,10 @@
 
     <div class="flex flex-col items-end justify-between md:flex-row">
         {{-- <!-- Next section button (Light) --> --}}
-        @include('frontend.component.ButtonNextSection', ['buttonType' => 'light'])
+        @include('frontend.component.ButtonNextSection', [
+            'buttonType' => 'light',
+            'nextSection' => 'speakers',
+        ])
 
         {{-- <!-- Date --> --}}
         <div
