@@ -1,10 +1,10 @@
-<nav id="navigationBar" class="top-0 z-20 w-full transition-all lg:py-8">
+<nav id="navigationBar" class="top-0 z-20 w-full transition-all lg:py-8 sticky">
     <div class="container flex flex-col items-center w-full lg:justify-between lg:flex-row">
         {{-- <!-- App Logo & Mobile nav toggler --> --}}
         <div class="relative inline-flex items-center justify-between w-full py-4 lg:w-auto lg:py-0">
             {{-- <!-- Logo --> --}}
             <a href="{{ url('/') }}">
-                <img src="{{ asset('assets/svgs/app-logo.svg') }}" class="w-[65px] h-[75px] lg:w-auto lg:h-full transition-all"
+                <img src="{{ asset('assets/svgs/app-logo.svg') }}" class="w-[65px] h-[75px] lg:w-auto lg:h-full transition ease-in-out duration-300 scale-100"
                     id="__appLogo" alt="">
             </a>
 
@@ -18,7 +18,7 @@
         {{-- <!-- Nav Menu - Hidden on mobile --> --}}
         <div class="hidden lg:block absolute top-0 z-30 pt-[22px] lg:pt-0 pl-8 lg:pl-0 lg:static border-l-[16px] border-l-turquoise-500 lg:border-none bg-dark-teal lg:bg-transparent overflow-y-auto w-full h-full lg:w-auto lg:h-auto left-full lg:left-0 transition-all duration-300"
             id="__navMenus">
-            <div class="flex flex-col gap-8 lg:items-center lg:flex-row">
+            <div class="flex flex-col gap-8 lg:items-center lg:flex-row h-full">
                 <div class="inline-flex items-center lg:hidden">
                     <p class="text-white coolvetica-bold text-[48px] leading-[44px] tracking-[-0.02em]">
                         _nav
@@ -40,7 +40,7 @@
                     /book-tickets
                 </a>
 
-                <div class="flex flex-col gap-5 lg:hidden mt-[200px] pb-[35px] lg:pb-0">
+                <div class="flex flex-col gap-5 lg:hidden mt-auto pb-[35px] lg:pb-0">
                     {{-- <!-- Mail To --> --}}
                     <div class="inline-flex gap-[31px] items-center md:mr-20 lg:mr-[136px] w-full md:w-max">
                         <img src="../assets/svgs/ic-arrow-upright.svg" class="w-[23px] h-8" alt="">
@@ -62,8 +62,6 @@
         </div>
     </div>
 </nav>
-{{-- <!-- Has the same height with navigation bar --> --}}
-<div class="pb-[204px] hidden" id="pseudoTopElement"></div>
 
 @push('scripts')
     <script>
@@ -77,15 +75,11 @@
             });
         }
         $(document).ready(function () {
-            let isOpen = false
+            let isOpen = false //mobile nav state
             $("#mobileToggler").each(function (_, navToggler) {
                 let target = $(navToggler).data("target");
                 $(navToggler).on("click", function (e) {
-                    // Animate top to bottom
-                    // $(target).animate({
-                    //     height: "toggle",
-                    // })
-                    isOpen = !isOpen
+                    isOpen = !isOpen // update nav state
 
                     if (!isOpen) {
                         setTimeout(() => {
@@ -119,25 +113,20 @@
             // navigation bar onScroll Effect
             $(window).on('scroll', (w) => {
                 if ($(window).width() > 991) {
-                    // if ($(window).scrollTop() > 0) {
-                        if ($(window).scrollTop() > navigationBar.height() + 64) {
+                    if ($(window).scrollTop() > navigationBar.height() + 64) {
                         $('#__appLogo').css({
-                            maxHeight: '70px',
-                            maxWidth: '80px'
+                            transform: 'scale(0.6)',
                         })
-                        $('#pseudoTopElement').removeClass('hidden')
-                        navigationBar.addClass('fixed')
-                        navigationBar.addClass('bg-dark-teal')
-                        // navCss('-150px')
-                        // setTimeout(() => {
-                        //     navCss('0')
-                        // }, 400);
+                        navigationBar.css({
+                            paddingTop: 0,
+                            paddingBottom: 0
+                        })
                     } else {
-                        $('#pseudoTopElement').addClass('hidden')
                         $('#__appLogo').removeAttr("style")
-                        navigationBar.removeClass('fixed')
-                        navigationBar.removeClass('bg-dark-teal')
+                        navigationBar.removeAttr("style")
                     }
+                } else {
+                    navigationBar.removeClass('sticky')
                 }
             })
         })

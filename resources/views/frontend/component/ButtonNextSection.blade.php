@@ -7,9 +7,9 @@
         <div class="flex items-end gap-[35px]">
             <a href="#{{ $nextSection }}" class="relative group">
                 <img src="{{ asset('assets/svgs/ic-arrow-downright-light.svg') }}"
-                    class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
+                    class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                 <img src="{{ asset('assets/svgs/layer-light.svg') }}"
-                    class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                    class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                     alt="">
                 {{-- <!-- Line stick --> --}}
                 <span
@@ -25,9 +25,9 @@
         <div class="flex items-end gap-[35px]">
             <a href="#{{ $nextSection }}" class="relative group">
                 <img src="{{ asset('assets/svgs/ic-arrow-downright-dark.svg') }}"
-                    class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
+                    class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                 <img src="{{ asset('assets/svgs/layer-dark.svg') }}"
-                    class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                    class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                     alt="">
                 <!-- Line stick -->
                 <span

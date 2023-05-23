@@ -40,18 +40,18 @@
             {{-- <!-- Trigger Next --> --}}
             <div class="absolute -translate-y-1/2 top-1/2 lg:right-[200px]" id="pseudoNextSlide">
                 <a href="javascript:void(0);" class="relative group">
-                    <img src="{{ asset('assets/svgs/ic-arrow-right.svg') }}" class="relative z-20" alt="">
+                    <img src="{{ asset('assets/svgs/ic-arrow-right.svg') }}" class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                     <img src="{{ asset('assets/svgs/layer-light.svg') }}"
-                        class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                        class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                         alt="">
                 </a>
             </div>
             {{-- <!-- Trigger Prev --> --}}
             <div class="absolute hidden -translate-y-1/2 top-1/2 lg:left-32" id="pseudoPrevSlide">
                 <a href="javascript:void(0);" class="relative group">
-                    <img src="{{ asset('assets/svgs/ic-arrow-left.svg') }}" class="relative z-20" alt="">
+                    <img src="{{ asset('assets/svgs/ic-arrow-left.svg') }}" class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                     <img src="{{ asset('assets/svgs/layer-light.svg') }}"
-                        class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                        class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                         alt="">
                 </a>
             </div>
@@ -75,6 +75,7 @@
             contain: true,
             pageDots: false,
             imagesLoaded: true,
+            groupCells: true,
             prevNextButtons: prevNextButtons
         })
 

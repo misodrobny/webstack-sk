@@ -14,9 +14,9 @@
                     <div class="absolute w-16 h-16 translate-x-1/2 -translate-y-1/2 top-1/2 right-1/2 lg:w-auto lg:h-auto"
                         id="btnPlayPrevEvent">
                         <a href="javascript:void(0);" class="relative group">
-                            <img src="../assets/svgs/ic-play.svg" class="relative z-20" alt="">
+                            <img src="../assets/svgs/ic-play.svg" class="relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                             <img src="../assets/svgs/layer-light.svg"
-                                class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                class="absolute z-10 transition-all top-2"
                                 alt="">
                         </a>
                     </div>
@@ -61,26 +61,26 @@
                 </div>
 
                 {{-- <!-- Gallery image --> --}}
-                <a data-fancybox href="../assets/images/gallery-1.png"
+                <a data-fancybox="prevEventGallery" href="../assets/images/gallery-1.png"
                     class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
                     style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
-                    <img src="../assets/svgs/ic-arrow-upright-small.svg" class="absolute bottom-0 left-0 z-10"
-                        alt="">
                     <img src="../assets/images/gallery-1.png" class="object-cover w-full h-full" alt="">
-                </a>
-                <a data-fancybox href="../assets/images/gallery-2.png"
-                    class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
-                    style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
                     <img src="../assets/svgs/ic-arrow-upright-small.svg" class="absolute bottom-0 left-0 z-10"
                         alt="">
+                </a>
+                <a data-fancybox="prevEventGallery" href="../assets/images/gallery-2.png"
+                    class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
+                    style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
                     <img src="../assets/images/gallery-2.png" class="object-cover w-full h-full" alt="">
-                </a>
-                <a data-fancybox href="../assets/images/gallery-3.png"
-                    class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
-                    style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
                     <img src="../assets/svgs/ic-arrow-upright-small.svg" class="absolute bottom-0 left-0 z-10"
                         alt="">
+                </a>
+                <a data-fancybox="prevEventGallery" href="../assets/images/gallery-3.png"
+                    class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
+                    style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
                     <img src="../assets/images/gallery-3.png" class="object-cover w-full h-full" alt="">
+                    <img src="../assets/svgs/ic-arrow-upright-small.svg" class="absolute bottom-0 left-0 z-10"
+                        alt="">
                 </a>
 
                 {{-- <!-- Plus thumbs --> --}}
@@ -113,13 +113,16 @@
         })
 
         // FancyBox Config
-        Fancybox.bind('[data-fancybox]', {});
-        // Custom the FancyBox style
-        $('[data-fancybox]').on('click', () => {
-            setTimeout(() => {
-                $('.fancybox__backdrop').addClass('!bg-dark-teal')
-            }, 100);
-        })
+        Fancybox.bind('[data-fancybox="prevEventGallery"]', {
+            Thumbs: {
+                type: "modern"
+            },
+            on: {
+                loaded: () => {
+                    $('.fancybox__backdrop').addClass('!bg-dark-teal')
+                },
+            },
+        });
 
         // Prev event video
         $('#btnPlayPrevEvent').on('click', () => {
