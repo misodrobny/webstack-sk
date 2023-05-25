@@ -8,9 +8,9 @@
                     _propose-a-talk
                 </h3>
                 <a href="javascript:void(0);" id="close-propose-talk" class="relative group">
-                    <img src="../assets/svgs/ic-close.svg" class="relative z-20 w-16 h-16 lg:w-auto lg:h-auto" alt="">
+                    <img src="../assets/svgs/ic-close.svg" class="w-16 h-16 lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                     <img src="../assets/svgs/layer-light.svg"
-                        class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                        class="w-16 h-16 lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                         alt="">
                 </a>
             </div>

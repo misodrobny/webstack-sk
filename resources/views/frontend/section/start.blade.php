@@ -15,9 +15,7 @@
     </div>
 
     <h1
-        class="text-white coolvetica-bold md:leading-[128px] md:text-[118px] leading-[44px] text-[48px] tracking-[-0.02em] md:tracking-[-0.02em] lg:max-w-[770px] ml-0 lg:mt-5 mt-[60px]">
-        _web <br> developers <br> conference <br>
-        <span class="text-gold coolvetica-bold">not only for laravel artisans_</span>
+        class="text-white coolvetica-bold md:leading-[128px] md:text-[118px] leading-[44px] text-[48px] tracking-[-0.02em] md:tracking-[-0.02em] max-w-[287px] md:max-w-[770px] ml-0 lg:mt-5 mt-[60px] min-h-[200px] md:min-h-[300px] lg:min-h-[550px]" id="heroHeadline">
     </h1>
 
     <div class="flex flex-col items-end justify-between md:flex-row">
@@ -38,3 +36,36 @@
         </div>
     </div>
 </section>
+
+@push('css')
+    <style>
+        :root {
+            --ti-cursor-transform: translate(100%, 23%) rotate(90deg);
+            --ti-cursor-color: #FFB500;
+            --ti-cursor-font-size: 0.5em;
+        }
+    </style>
+
+@endpush
+
+@push('scripts')
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script>
+        const typeHeadline = new TypeIt("#heroHeadline", {
+            speed: 100,
+            startDelay: 900,
+        })
+            .type('_web <br class="hidden lg:block">', {delay: 100})
+            .type('dveloopers', {delay: 100})
+            .move(-4, {delay: 100})
+            .delete(1)
+            .move(-4, {delay: 100})
+            .type('e')
+            .move(null, { to: "END" })
+            .type('<br class="hidden lg:block"> conference <br class="hidden lg:block">', {delay: 200})
+            .type('not only for', {delay: 200})
+            .delete(12, {delay: 200})
+            .type('<span class="text-gold coolvetica-bold">not only for <br class="hidden lg:block"> laravel artisans</span>', {delay: 300})
+        typeHeadline.go()
+    </script>
+@endpush
