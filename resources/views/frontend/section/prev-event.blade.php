@@ -10,15 +10,13 @@
                 <div id="placeholderVideoPrevEvent"
                     style="clip-path: polygon(100% 0%, 100% 90%, 92% 100%, 0% 100%, 0% 0%);">
                     <img src="../assets/images/prev-event.png" class="object-cover w-full h-full" alt="">
-                    {{-- <!-- Button play --> --}}
+                    {{-- Button play --}}
                     <div class="absolute w-16 h-16 translate-x-1/2 -translate-y-1/2 top-1/2 right-1/2 lg:w-auto lg:h-auto"
                         id="btnPlayPrevEvent">
-                        <a href="javascript:void(0);" class="relative group">
-                            <img src="../assets/svgs/ic-play.svg" class="relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
-                            <img src="../assets/svgs/layer-light.svg"
-                                class="absolute z-10 transition-all top-2"
-                                alt="">
-                        </a>
+                        @component('frontend.component.ws-button-icon')
+                            @slot('icon', asset('assets/svgs/ic-play.svg'))
+                            @slot('layer', 'light')
+                        @endcomponent
                     </div>
                 </div>
 
@@ -29,11 +27,11 @@
                 </div>
             </div>
 
-            {{-- <!-- Ornaments --> --}}
+            {{-- Ornaments --}}
             @include('frontend.component.PrevEventOrnaments')
 
             <div class="mt-8 md:mt-12" id="prevEventGallery">
-                {{-- <!-- Event name, Date, Speakers Small Thumbnail --> --}}
+                {{-- Event name, Date, Speakers Small Thumbnail --}}
                 <div class="mr-6 lg:mr-16">
                     <h5
                         class="text-turquoise-500 pt-1 bg-dark-teal coolvetica-regular text-2xl md:text-[36px] md:leading-[44px] tracking-[-0.02em] mb-[6px] md:mb-1 w-max">
@@ -60,7 +58,7 @@
                     </div>
                 </div>
 
-                {{-- <!-- Gallery image --> --}}
+                {{-- Gallery image --}}
                 <a data-fancybox="prevEventGallery" href="../assets/images/gallery-1.png"
                     class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
                     style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
@@ -83,7 +81,7 @@
                         alt="">
                 </a>
 
-                {{-- <!-- Plus thumbs --> --}}
+                {{-- Plus thumbs --}}
                 <a href="#" class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
                     style="clip-path: polygon(100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 0%);">
                     <img src="../assets/svgs/ic-plus.svg"
@@ -92,10 +90,10 @@
             </div>
         </div>
 
-        {{-- <!-- Next section button (Dark) --> --}}
+        {{-- Next section button (Dark) --}}
         @include('frontend.component.ButtonNextSection', [
             'buttonType' => 'dark',
-            'nextSection' => 'book-tickets',
+            'nextSection' => '#book-tickets',
         ])
     </div>
 </section>

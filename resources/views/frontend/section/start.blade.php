@@ -1,6 +1,6 @@
 <section id="start"
     class="container relative min-h-screen pb-[128px] xl:px-[160px] overflow-hidden lg:overflow-visible">
-    {{-- <!-- Big W --> --}}
+    {{-- Big W --}}
     <div class="absolute top-10 -right-[104px] lg:-top-[330px] lg:right-20 -z-10" id="innerW" data-aos="zoom-in-up"
         data-aos-delay="300" data-aos-duration="600">
         <svg width="909" height="850" class="w-[356px] h-[333px] md:w-full md:h-full " viewBox="0 0 909 850"
@@ -19,13 +19,13 @@
     </h1>
 
     <div class="flex flex-col items-end justify-between md:flex-row">
-        {{-- <!-- Next section button (Light) --> --}}
+        {{-- Next section button (Light) --}}
         @include('frontend.component.ButtonNextSection', [
             'buttonType' => 'light',
-            'nextSection' => 'speakers',
+            'nextSection' => '#speakers',
         ])
 
-        {{-- <!-- Date --> --}}
+        {{-- Date --}}
         <div
             class="text-turquoise-500 mt-[70px] md:mt-[50px] px-0 flex flex-col items-start w-max justify-end ml-auto mb-[134px] lg:mb-0">
             <p class="mb-2 text-xl md:text-2xl coolvetica-bold">_when/where</p>
@@ -57,14 +57,14 @@
         })
             .type('_web <br class="hidden lg:block">', {delay: 100})
             .type('dveloopers', {delay: 100})
-            .move(-4, {delay: 100})
-            .delete(1)
-            .move(-4, {delay: 100})
-            .type('e')
+            .move(-4, {delay: 1000})
+            .delete(1, {delay: 700})
+            .move(-4, {delay: 1000})
+            .type('e', {delay: 700})
             .move(null, { to: "END" })
             .type('<br class="hidden lg:block"> conference <br class="hidden lg:block">', {delay: 200})
             .type('not only for', {delay: 200})
-            .delete(12, {delay: 200})
+            .delete(12, {delay: 300})
             .type('<span class="text-gold coolvetica-bold">not only for <br class="hidden lg:block"> laravel artisans</span>', {delay: 300})
         typeHeadline.go()
     </script>

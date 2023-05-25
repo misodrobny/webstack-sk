@@ -6,7 +6,7 @@
 
         <div class="xl:ml-[160px] relative">
             <div id="speakerCards">
-                {{-- <!-- Card - Speaker 1 --> --}}
+                {{-- Card - Speaker 1 --}}
                 @component('frontend.component.SpeakerCard')
                     @slot('routeLink', '#redirectLink')
                     @slot('photo', asset('assets/images/speaker-1.png'))
@@ -15,7 +15,7 @@
                     @slot('twitterAccount', 'eunomaduro')
                 @endcomponent
 
-                {{-- <!-- Card - Speaker 2 --> --}}
+                {{-- Card - Speaker 2 --}}
                 @component('frontend.component.SpeakerCard')
                     @slot('routeLink', '#redirectLink')
                     @slot('photo', asset('assets/images/speaker-2.png'))
@@ -24,7 +24,7 @@
                     @slot('twitterAccount', 'mateusjatenee')
                 @endcomponent
 
-                {{-- <!-- Card - Speaker 3 --> --}}
+                {{-- Card - Speaker 3 --}}
                 @component('frontend.component.SpeakerCard')
                     @slot('routeLink', '#redirectLink')
                     @slot('photo', asset('assets/images/speaker-3.png'))
@@ -33,34 +33,30 @@
                     @slot('twitterAccount', 'xiCO2k')
                 @endcomponent
 
-                {{-- <!-- Card - Proposal --> --}}
+                {{-- Card - Proposal --}}
                 @include('frontend.component.ProposeTalkCard')
             </div>
 
-            {{-- <!-- Trigger Next --> --}}
+            {{-- Trigger Next --}}
             <div class="absolute -translate-y-1/2 top-1/2 lg:right-[200px]" id="pseudoNextSlide">
-                <a href="javascript:void(0);" class="relative group">
-                    <img src="{{ asset('assets/svgs/ic-arrow-right.svg') }}" class="w-16 h-16 lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
-                    <img src="{{ asset('assets/svgs/layer-light.svg') }}"
-                        class="w-16 h-16 lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
-                        alt="">
-                </a>
+                @component('frontend.component.ws-button-icon')
+                    @slot('icon', asset('assets/svgs/ic-arrow-right.svg'))
+                    @slot('layer', 'light')
+                @endcomponent
             </div>
-            {{-- <!-- Trigger Prev --> --}}
+            {{-- Trigger Prev --}}
             <div class="absolute hidden -translate-y-1/2 top-1/2 lg:left-32" id="pseudoPrevSlide">
-                <a href="javascript:void(0);" class="relative group">
-                    <img src="{{ asset('assets/svgs/ic-arrow-left.svg') }}" class="w-16 h-16 lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
-                    <img src="{{ asset('assets/svgs/layer-light.svg') }}"
-                        class="w-16 h-16 lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
-                        alt="">
-                </a>
+                @component('frontend.component.ws-button-icon')
+                    @slot('icon', asset('assets/svgs/ic-arrow-left.svg'))
+                    @slot('layer', 'light')
+                @endcomponent
             </div>
         </div>
 
-        {{-- <!-- Next section button (Dark) --> --}}
+        {{-- Next section button (Dark) --}}
         @include('frontend.component.ButtonNextSection', [
             'buttonType' => 'dark',
-            'nextSection' => 'event-schedule',
+            'nextSection' => '#event-schedule',
         ])
     </div>
 </section>

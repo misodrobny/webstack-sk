@@ -9,7 +9,7 @@
             </p>
         </div>
 
-        <!-- Schedule List -->
+        {{-- Schedule List --}}
         <div class="max-w-[700px] mx-auto">
             <ul class="flex flex-col gap-3 md:gap-6">
                 <li
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                 </li>
-                <!-- break -->
+                {{-- break --}}
                 <li
                     class="pb-3 md:pb-[21px] flex flex-col md:flex-row border-b-[3px] border-b-dark-teal last:border-none">
                     <p class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                 </li>
-                <!-- break -->
+                {{-- break --}}
                 <li
                     class="pb-3 md:pb-[21px] flex flex-col md:flex-row border-b-[3px] border-b-dark-teal last:border-none">
                     <p class="coolvetica-book text-dark-teal text-lg md:text-xl md:leading-[30px] min-w-[100px] mr-12">
@@ -176,10 +176,10 @@
             </ul>
         </div>
 
-        <!-- Next section button (Dark) -->
+        {{-- Next section button (Dark) --}}
         @include('frontend.component.ButtonNextSection', [
             'buttonType' => 'dark',
-            'nextSection' => 'book-tickets',
+            'nextSection' => '#book-tickets',
         ])
 
     </div>
