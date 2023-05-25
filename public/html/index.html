@@ -51,19 +51,28 @@
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
+        <style>
+            :root {
+                --ti-cursor-transform: translate(100%, 23%) rotate(90deg);
+                --ti-cursor-color: #FFB500;
+                --ti-cursor-font-size: 0.5em;
+            }
+        </style>
     </head>
 
     <body class="overflow-x-hidden">
 
-        <nav id="navigationBar" class="top-0 z-20 w-full transition-all lg:py-8">
+        <nav id="navigationBar" class="top-0 z-20 w-full transition-all lg:py-8 sticky">
             <div class="container flex flex-col items-center w-full lg:justify-between lg:flex-row">
                 <!-- App Logo & Mobile nav toggler -->
                 <div class="relative inline-flex items-center justify-between w-full py-4 lg:w-auto lg:py-0">
                     <!-- Logo -->
-                    <a href="/public/html/index.html">
-                        <img src="../assets/svgs/app-logo.svg" class="w-[65px] h-[75px] lg:w-auto lg:h-full transition-all"
+                    <a href="/">
+                        <img src="../assets/svgs/app-logo.svg" class="w-[65px] h-[75px] lg:w-auto lg:h-full transition ease-in-out duration-300 scale-100"
                             id="__appLogo" alt="">
                     </a>
+
+                    <!-- Mobile Toggler -->
                     <a href="javascript:void(0);" id="mobileToggler" data-target="#__navMenus">
                         <div class="child"></div>
                         <div class="child"></div>
@@ -73,7 +82,7 @@
                 <!-- Nav Menu - Hidden on mobile -->
                 <div class="hidden lg:block absolute top-0 z-30 pt-[22px] lg:pt-0 pl-8 lg:pl-0 lg:static border-l-[16px] border-l-turquoise-500 lg:border-none bg-dark-teal lg:bg-transparent overflow-y-auto w-full h-full lg:w-auto lg:h-auto left-full lg:left-0 transition-all duration-300"
                     id="__navMenus">
-                    <div class="flex flex-col gap-8 lg:items-center lg:flex-row">
+                    <div class="flex flex-col gap-8 lg:items-center lg:flex-row h-full">
                         <div class="inline-flex items-center lg:hidden">
                             <p class="text-white coolvetica-bold text-[48px] leading-[44px] tracking-[-0.02em]">
                                 _nav
@@ -95,7 +104,7 @@
                             /book-tickets
                         </a>
 
-                        <div class="flex flex-col gap-5 lg:hidden mt-[200px] pb-[35px] lg:pb-0">
+                        <div class="flex flex-col gap-5 lg:hidden mt-auto pb-[35px] lg:pb-0">
                             <!-- Mail To -->
                             <div class="inline-flex gap-[31px] items-center md:mr-20 lg:mr-[136px] w-full md:w-max">
                                 <img src="../assets/svgs/ic-arrow-upright.svg" class="w-[23px] h-8" alt="">
@@ -110,7 +119,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Social Media -->
+
                             <div class="flex items-center gap-6">
                                 <a href="#">
                                     <img src="../assets/svgs/logo-twitter.svg" alt="">
@@ -130,14 +139,12 @@
                 </div>
             </div>
         </nav>
-        <!-- Has the same height with navigation bar -->
-        <div class="pb-[204px] hidden" id="pseudoTopElement"></div>
 
         <section id="start"
             class="container relative min-h-screen pb-[128px] xl:px-[160px] overflow-hidden lg:overflow-visible">
             <!-- Big W -->
-            <div class="absolute top-10 -right-[104px] lg:-top-[330px] lg:right-20 -z-10" id="innerW"
-                data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="600">
+            <div class="absolute top-10 -right-[104px] lg:-top-[330px] lg:right-20 -z-10" id="innerW" data-aos="zoom-in-up"
+            data-aos-delay="300" data-aos-duration="600">
                 <svg width="909" height="850" class="w-[356px] h-[333px] md:w-full md:h-full " viewBox="0 0 909 850"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -149,11 +156,7 @@
                 </svg>
             </div>
 
-            <h1
-                class="text-white coolvetica-bold md:leading-[128px] md:text-[118px] leading-[44px] text-[48px] tracking-[-0.02em] md:tracking-[-0.02em] lg:max-w-[770px] ml-0 lg:mt-5 mt-[60px]">
-                _web <br> developers <br> conference <br>
-                <span class="text-gold coolvetica-bold">not only for laravel artisans_</span>
-            </h1>
+            <h1 class="text-white coolvetica-bold md:leading-[128px] md:text-[118px] leading-[44px] text-[48px] tracking-[-0.02em] md:tracking-[-0.02em] max-w-[287px] md:max-w-[770px] ml-0 lg:mt-5 mt-[60px] min-h-[200px] md:min-h-[300px] lg:min-h-[550px]" id="heroHeadline"></h1>
 
             <div class="flex flex-col items-end justify-between md:flex-row">
                 <!-- Next section button (Light) -->
@@ -161,9 +164,9 @@
                     <div class="flex items-end gap-[35px]">
                         <a href="#speakers" class="relative group">
                             <img src="../assets/svgs/ic-arrow-downright-light.svg"
-                                class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
+                                class="w-16 h-16 lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                             <img src="../assets/svgs/layer-light.svg"
-                                class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                class="w-16 h-16 lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                                 alt="">
                             <!-- Line stick -->
                             <span
@@ -356,18 +359,18 @@
                     <!-- Trigger Next -->
                     <div class="absolute -translate-y-1/2 top-1/2 lg:right-[200px]" id="pseudoNextSlide">
                         <a href="javascript:void(0);" class="relative group">
-                            <img src="../assets/svgs/ic-arrow-right.svg" class="relative z-20" alt="">
+                            <img src="../assets/svgs/ic-arrow-right.svg" class="w-16 h-16 lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                             <img src="../assets/svgs/layer-light.svg"
-                                class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                class="w-16 h-16 lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                                 alt="">
                         </a>
                     </div>
                     <!-- Trigger Prev -->
                     <div class="absolute hidden -translate-y-1/2 top-1/2 lg:left-32" id="pseudoPrevSlide">
                         <a href="javascript:void(0);" class="relative group">
-                            <img src="../assets/svgs/ic-arrow-left.svg" class="relative z-20" alt="">
+                            <img src="../assets/svgs/ic-arrow-left.svg" class="w-16 h-16 lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                             <img src="../assets/svgs/layer-light.svg"
-                                class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                class="w-16 h-16 lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                                 alt="">
                         </a>
                     </div>
@@ -378,9 +381,9 @@
                     <div class="flex items-end gap-[35px]">
                         <a href="#event-schedule" class="relative group">
                             <img src="../assets/svgs/ic-arrow-downright-dark.svg"
-                                class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
+                                class="w-16 h-16 lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                             <img src="../assets/svgs/layer-dark.svg"
-                                class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                class="w-16 h-16 lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                                 alt="">
                             <!-- Line stick -->
                             <span
@@ -412,9 +415,9 @@
                             <div class="absolute w-16 h-16 translate-x-1/2 -translate-y-1/2 top-1/2 right-1/2 lg:w-auto lg:h-auto"
                                 id="btnPlayPrevEvent">
                                 <a href="javascript:void(0);" class="relative group">
-                                    <img src="../assets/svgs/ic-play.svg" class="relative z-20" alt="">
+                                    <img src="../assets/svgs/ic-play.svg" class="w-16 h-16 lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                                     <img src="../assets/svgs/layer-light.svg"
-                                        class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                        class="w-16 h-16 lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                                         alt="">
                                 </a>
                             </div>
@@ -477,26 +480,26 @@
                         </div>
 
                         <!-- Gallery image -->
-                        <a data-fancybox href="../assets/images/gallery-1.png"
+                        <a data-fancybox="prevEventGallery" href="../assets/images/gallery-1.png"
                             class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
                             style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
-                            <img src="../assets/svgs/ic-arrow-upright-small.svg"
-                                class="absolute bottom-0 left-0 z-10" alt="">
                             <img src="../assets/images/gallery-1.png" class="object-cover w-full h-full" alt="">
-                        </a>
-                        <a data-fancybox href="../assets/images/gallery-2.png"
-                            class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
-                            style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
                             <img src="../assets/svgs/ic-arrow-upright-small.svg"
                                 class="absolute bottom-0 left-0 z-10" alt="">
+                        </a>
+                        <a data-fancybox="prevEventGallery" href="../assets/images/gallery-2.png"
+                            class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
+                            style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
                             <img src="../assets/images/gallery-2.png" class="object-cover w-full h-full" alt="">
-                        </a>
-                        <a data-fancybox href="../assets/images/gallery-3.png"
-                            class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
-                            style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
                             <img src="../assets/svgs/ic-arrow-upright-small.svg"
                                 class="absolute bottom-0 left-0 z-10" alt="">
+                        </a>
+                        <a data-fancybox="prevEventGallery" href="../assets/images/gallery-3.png"
+                            class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
+                            style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
                             <img src="../assets/images/gallery-3.png" class="object-cover w-full h-full" alt="">
+                            <img src="../assets/svgs/ic-arrow-upright-small.svg"
+                                class="absolute bottom-0 left-0 z-10" alt="">
                         </a>
 
                         <!-- Plus thumbs -->
@@ -506,10 +509,6 @@
                                 class="absolute z-10 translate-x-1/2 translate-y-1/2 bottom-1/2 right-1/2" alt="">
                         </a>
                     </div>
-
-                    <!-- <button type="buton" id="btnPlayPrevEvent" class="px-6 py-3 mt-12 font-bold rounded-sm bg-gold">
-                        play
-                    </button> -->
                 </div>
 
                 <!-- Next section button (Dark) -->
@@ -517,9 +516,9 @@
                     <div class="flex items-end gap-[35px]">
                         <a href="#event-schedule" class="relative group">
                             <img src="../assets/svgs/ic-arrow-downright-dark.svg"
-                                class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
+                                class="w-16 h-16 lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                             <img src="../assets/svgs/layer-dark.svg"
-                                class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                class="w-16 h-16 lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                                 alt="">
                             <!-- Line stick -->
                             <span
@@ -728,9 +727,9 @@
                     <div class="flex items-end gap-[35px]">
                         <a href="#book-tickets" class="relative group">
                             <img src="../assets/svgs/ic-arrow-downright-dark.svg"
-                                class="w-[64px] h-[64px] lg:h-auto lg:w-auto relative z-20" alt="">
+                                class="w-16 h-16 lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                             <img src="../assets/svgs/layer-dark.svg"
-                                class="w-[64px] h-[64px] lg:h-auto lg:w-auto absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                class="w-16 h-16 lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                                 alt="">
                             <!-- Line stick -->
                             <span
@@ -877,9 +876,9 @@
                             _propose-a-talk
                         </h3>
                         <a href="javascript:void(0);" id="close-propose-talk" class="relative group">
-                            <img src="../assets/svgs/ic-close.svg" class="relative z-20 w-16 h-16 lg:w-auto lg:h-auto" alt="">
+                            <img src="../assets/svgs/ic-close.svg" class="w-16 h-16 lg:h-auto lg:w-auto relative z-20 group-hover:translate-y-1 group-active:translate-y-[10px] transition-all" alt="">
                             <img src="../assets/svgs/layer-light.svg"
-                                class="absolute z-10 transition-all top-2 group-hover:top-0 group-hover:opacity-0"
+                                class="w-16 h-16 lg:h-auto lg:w-auto absolute z-10 transition-all top-2"
                                 alt="">
                         </a>
                     </div>
@@ -905,7 +904,7 @@
         </section>
 
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -914,6 +913,21 @@
             // Init AOS animate
             AOS.init();
 
+            // scroll helper
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    if (this.getAttribute("href") != "#" && this.getAttribute("href") != "#!") {
+                        document.querySelector(this.getAttribute("href")).scrollIntoView({
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
+        </script>
+
+        <!-- Navbar -->
+        <script>
             // NavigationBar config
             let navigationBar = $('#navigationBar')
             function navCss(topValue) {
@@ -924,15 +938,11 @@
                 });
             }
             $(document).ready(function () {
-                let isOpen = false
+                let isOpen = false //mobile nav state
                 $("#mobileToggler").each(function (_, navToggler) {
                     let target = $(navToggler).data("target");
                     $(navToggler).on("click", function (e) {
-                        // Animate top to bottom
-                        // $(target).animate({
-                        //     height: "toggle",
-                        // })
-                        isOpen = !isOpen
+                        isOpen = !isOpen // update nav state
 
                         if (!isOpen) {
                             setTimeout(() => {
@@ -966,46 +976,57 @@
                 // navigation bar onScroll Effect
                 $(window).on('scroll', (w) => {
                     if ($(window).width() > 991) {
-                        // if ($(window).scrollTop() > 0) {
-                            if ($(window).scrollTop() > navigationBar.height() + 64) {
+                        if ($(window).scrollTop() > navigationBar.height() + 64) {
                             $('#__appLogo').css({
-                                maxHeight: '70px',
-                                maxWidth: '80px'
+                                transform: 'scale(0.6)',
                             })
-                            $('#pseudoTopElement').removeClass('hidden')
-                            navigationBar.addClass('fixed')
-                            navigationBar.addClass('bg-dark-teal')
-                            // navCss('-150px')
-                            // setTimeout(() => {
-                            //     navCss('0')
-                            // }, 400);
+                            navigationBar.css({
+                                paddingTop: 0,
+                                paddingBottom: 0
+                            })
                         } else {
-                            $('#pseudoTopElement').addClass('hidden')
                             $('#__appLogo').removeAttr("style")
-                            navigationBar.removeClass('fixed')
-                            navigationBar.removeClass('bg-dark-teal')
+                            navigationBar.removeAttr("style")
                         }
+                    } else {
+                        navigationBar.removeClass('sticky')
                     }
                 })
             })
+        </script>
 
+        <!-- Headline auto type animation -->
+        <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+        <script>
+            const typeHeadline = new TypeIt("#heroHeadline", {
+                speed: 100,
+                startDelay: 900,
+            })
+                .type('_web <br class="hidden lg:block">', {delay: 100})
+                .type('dveloopers', {delay: 100})
+                .move(-4, {delay: 1000})
+                .delete(1, {delay: 700})
+                .move(-4, {delay: 1000})
+                .type('e', {delay: 700})
+                .move(null, { to: "END" })
+                .type('<br class="hidden lg:block"> conference <br class="hidden lg:block">', {delay: 200})
+                .type('not only for', {delay: 200})
+                .delete(12, {delay: 300})
+                .type('<span class="text-gold coolvetica-bold">not only for <br class="hidden lg:block"> laravel artisans</span>', {delay: 300})
+            typeHeadline.go()
+        </script>
+
+        <!-- Speakers section -->
+        <script type="text/javascript">
             const prevNextButtons = $(window).width() > 991 ? true : false
             // const isDraggable = $(window).width() < 991 ? true : false
-
-            $('#prevEventGallery').flickity({
-                cellAlign: 'left',
-                contain: true,
-                pageDots: false,
-                imagesLoaded: true,
-                prevNextButtons: false,
-                // draggable: isDraggable
-            })
 
             $('#speakerCards').flickity({
                 cellAlign: 'center',
                 contain: true,
                 pageDots: false,
                 imagesLoaded: true,
+                groupCells: true,
                 prevNextButtons: prevNextButtons
             })
 
@@ -1050,31 +1071,37 @@
                     pseudoNextEl.removeClass('hidden')
                 }
             })
+        </script>
+
+
+        <!-- Prev Event section -->
+        <script type="text/javascript">
+            // gallery slider
+            $('#prevEventGallery').flickity({
+                cellAlign: 'left',
+                contain: true,
+                pageDots: false,
+                imagesLoaded: true,
+                prevNextButtons: false,
+            })
 
             // FancyBox Config
-            Fancybox.bind('[data-fancybox]', {});
-            // Custom the FancyBox style
-            $('[data-fancybox]').on('click', () => {
-                setTimeout(() => {
-                    $('.fancybox__backdrop').addClass('!bg-dark-teal')
-                }, 100);
-            })
-
-            // Modal JS
-            $('[data-propose-talk]').click(function(){
-                $('#__modal-container').removeAttr('class').addClass('animation-unfolding');
-                $('body').addClass('overflow-hidden');
-            })
-
-            $('#close-propose-talk').click(function(){
-                $('#__modal-container').addClass('out');
-                $('body').removeClass('overflow-hidden');
+            Fancybox.bind('[data-fancybox="prevEventGallery"]', {
+                Thumbs: {
+                    type: "modern"
+                },
+                on: {
+                    loaded: () => {
+                        $('.fancybox__backdrop').addClass('!bg-dark-teal')
+                    },
+                },
             });
 
             // Prev event video
             $('#btnPlayPrevEvent').on('click', () => {
                 $embedId = 'daj9TVwlWb0'
-                $iframeSrc = `https://www.youtube.com/embed/${$embedId}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;autoplay=1`
+                $iframeSrc =
+                    `https://www.youtube.com/embed/${$embedId}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;autoplay=1`
 
                 $('#placeholderVideoPrevEvent').addClass('hidden')
                 $('#__prevEventFootage').parent().removeClass('hidden')
@@ -1086,17 +1113,19 @@
                     opacity: 0
                 })
             })
+        </script>
 
-            // scroll helper
-            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-                anchor.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    if (this.getAttribute("href") != "#" && this.getAttribute("href") != "#!") {
-                        document.querySelector(this.getAttribute("href")).scrollIntoView({
-                            behavior: "smooth",
-                        });
-                    }
-                });
+        <!-- Propose talk modal -->
+        <script type="text/javascript">
+            // Modal JS
+            $('[data-propose-talk]').click(function(){
+                $('#__modal-container').removeAttr('class').addClass('animation-unfolding');
+                $('body').addClass('overflow-hidden');
+            })
+
+            $('#close-propose-talk').click(function(){
+                $('#__modal-container').addClass('out');
+                $('body').removeClass('overflow-hidden');
             });
         </script>
     </body>
