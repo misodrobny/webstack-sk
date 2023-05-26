@@ -4,7 +4,7 @@
     <div class="container relative pt-6 md:pt-[128px] pb-8 md:pb-[114px] lg:px-[100px] flex flex-col">
         <div class="flex-col flex-items-center md:flex-row">
             {{-- <!-- Mail To --> --}}
-            <div class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[136px] w-full md:w-max">
+            <div class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[40px] w-full md:w-max">
                 <div class="w-fit md:h-[60px] py-[15px]">
                     <img src="../assets/svgs/ic-arrow-upright.svg" alt="">
                 </div>
@@ -12,9 +12,9 @@
                     <div class="flex flex-row md:flex-col gap-x-[13px] items-center md:items-start pb-[13px]">
                         <label for=""
                             class="text-turquoise-500 coolvetica-regular text-lg md:text-[20px] md:leading-[30px]">mailto:</label>
-                        <a href="mailto:hello@webstack.com"
+                        <a href="mailto:hello@webstack.sk"
                             class="text-white md:text-turquoise-500 text-xl md:text-[48px] md:leading-[44px] tracking-[-0.02em] coolvetica-regular">
-                            hello@webstack.com
+                            hello@webstack.sk
                         </a>
                     </div>
                     {{-- <!-- bottom line --> --}}
@@ -26,8 +26,8 @@
             </div>
 
             {{-- <!-- partner 1 --> --}}
-            <a rel="partner" target="_blank" href="https://brackets.io/"
-                class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[82px] w-full md:w-max">
+            <a rel="partner" target="_blank" href="https://meetbrackets.com/"
+                class="inline-flex gap-[31px] items-end md:mr-20 lg:mr-[40px] w-full md:w-max">
                 <div class="w-fit md:h-[60px] py-[15px]">
                     <img src="../assets/svgs/ic-arrow-upright-upload.svg" alt="">
                 </div>
@@ -39,7 +39,7 @@
                         <img src="../assets/svgs/partner-brackets-turquoise.svg" class="mt-[14px] hidden md:block"
                             alt="">
                         {{-- <!-- Mobile icon --> --}}
-                        <img src="../assets/svgs/partner-brackets.svg" class="block md:hidden" alt="">
+                        <img src="../assets/svgs/partner-brackets-turquoise.svg" class="block md:hidden" alt="">
                     </div>
                     {{-- <!-- bottom line --> --}}
                     <div class="relative bg-[#17a68c] w-full h-[3px]">
@@ -63,7 +63,7 @@
                         <img src="../assets/svgs/partner-theshop-turquoise.svg" class="mt-[14px] hidden md:block"
                             alt="">
                         {{-- <!-- Mobile icon --> --}}
-                        <img src="../assets/svgs/partner-theshop.svg" class="block md:hidden" alt="">
+                        <img src="../assets/svgs/partner-theshop-turquoise.svg" class="block md:hidden" alt="">
                     </div>
                     {{-- <!-- bottom line --> --}}
                     <div class="relative bg-[#17a68c] w-full h-[3px]">
@@ -80,7 +80,7 @@
                     © Webstack 2023. <span class="hidden md:inline">All rights reserved.</span>
 
                 </p>
-                <a href="#" class="text-base text-white md:text-lg coolvetica-book">
+                <a target="_blank" href="{{ route('privacy-policy') }}" class="text-base text-white md:text-lg coolvetica-book">
                     /privacy-policy
                 </a>
             </div>

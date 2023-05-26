@@ -48,9 +48,9 @@
                             <div class="flex flex-row md:flex-col gap-x-[13px] items-center md:items-start">
                                 <label for=""
                                     class="text-turquoise-500 coolvetica-regular text-lg md:text-[20px] md:leading-[30px]">mailto:</label>
-                                <a href="mailto:hello@webstack.com"
+                                <a href="mailto:hello@webstack.sk"
                                     class="text-white md:text-turquoise-500 text-xl md:text-[48px] md:leading-[44px] tracking-[-0.02em] coolvetica-regular">
-                                    hello@webstack.com
+                                    hello@webstack.sk
                                 </a>
                             </div>
                         </div>

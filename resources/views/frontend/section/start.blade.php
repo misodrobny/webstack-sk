@@ -30,7 +30,7 @@
             class="text-turquoise-500 mt-[70px] md:mt-[50px] px-0 flex flex-col items-start w-max justify-end ml-auto mb-[134px] lg:mb-0">
             <p class="mb-2 text-xl md:text-2xl coolvetica-bold">_when/where</p>
             <p class="text-[30px] leading-[38px] md:text-[48px] md:leading-[44px] coolvetica-bold">
-                27_09_2023_ <br>
+                28_09_2023_ <br>
                 hubhub bratislava_
             </p>
         </div>

@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
         @stack('css')
+
+        {!! RecaptchaV3::initJs() !!}
     </head>
 
     <body class="overflow-x-hidden">

@@ -9,48 +9,30 @@
                 {{-- Card - Speaker 1 --}}
                 @component('frontend.component.SpeakerCard')
                     @slot('routeLink', '#redirectLink')
-                    @slot('photo', asset('assets/images/speaker-1.png'))
-                    @slot('name', 'Nuno Maduro')
-                    @slot('role', 'Laravel Core Team Member')
-                    @slot('twitterAccount', 'eunomaduro')
-                @endcomponent
-
-                {{-- Card - Speaker 2 --}}
-                @component('frontend.component.SpeakerCard')
-                    @slot('routeLink', '#redirectLink')
-                    @slot('photo', asset('assets/images/speaker-2.png'))
-                    @slot('name', 'Mateus Guimarães')
-                    @slot('role', 'Sr. Full-Stack Developer')
-                    @slot('twitterAccount', 'mateusjatenee')
-                @endcomponent
-
-                {{-- Card - Speaker 3 --}}
-                @component('frontend.component.SpeakerCard')
-                    @slot('routeLink', '#redirectLink')
-                    @slot('photo', asset('assets/images/speaker-3.png'))
-                    @slot('name', 'Francisco Madeira')
-                    @slot('role', 'Co-author of Termwind')
-                    @slot('twitterAccount', 'xiCO2k')
+                    @slot('photo', asset('assets/images/default-avatar.png'))
+                    @slot('name', 'Michi Hoffmann')
+                    @slot('role', 'Software Engineer at Sentry')
+                    @slot('twitterAccount', 'cleptric')
                 @endcomponent
 
                 {{-- Card - Proposal --}}
                 @include('frontend.component.ProposeTalkCard')
             </div>
 
-            {{-- Trigger Next --}}
-            <div class="absolute -translate-y-1/2 top-1/2 lg:right-[200px]" id="pseudoNextSlide">
-                @component('frontend.component.ws-button-icon')
-                    @slot('icon', asset('assets/svgs/ic-arrow-right.svg'))
-                    @slot('layer', 'light')
-                @endcomponent
-            </div>
-            {{-- Trigger Prev --}}
-            <div class="absolute hidden -translate-y-1/2 top-1/2 lg:left-32" id="pseudoPrevSlide">
-                @component('frontend.component.ws-button-icon')
-                    @slot('icon', asset('assets/svgs/ic-arrow-left.svg'))
-                    @slot('layer', 'light')
-                @endcomponent
-            </div>
+{{--            --}}{{-- Trigger Next --}}
+{{--            <div class="absolute -translate-y-1/2 top-1/2 lg:right-[200px]" id="pseudoNextSlide">--}}
+{{--                @component('frontend.component.ws-button-icon')--}}
+{{--                    @slot('icon', asset('assets/svgs/ic-arrow-right.svg'))--}}
+{{--                    @slot('layer', 'light')--}}
+{{--                @endcomponent--}}
+{{--            </div>--}}
+{{--            --}}{{-- Trigger Prev --}}
+{{--            <div class="absolute hidden -translate-y-1/2 top-1/2 lg:left-32" id="pseudoPrevSlide">--}}
+{{--                @component('frontend.component.ws-button-icon')--}}
+{{--                    @slot('icon', asset('assets/svgs/ic-arrow-left.svg'))--}}
+{{--                    @slot('layer', 'light')--}}
+{{--                @endcomponent--}}
+{{--            </div>--}}
         </div>
 
         {{-- Next section button (Dark) --}}

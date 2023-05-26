@@ -13,6 +13,11 @@
         display: none !important;
     }
 
+    .text-weight-normal {
+        font-weight: normal !important;
+        text-justify: inter-word !important;
+    }
+
     /* Book - Bk */
     @font-face {
         font-family: 'Coolvetica Bk';
@@ -71,10 +76,21 @@
         @apply px-2 pt-1 pb-2 text-2xl lg:text-center text-white bg-dark-teal coolvetica-regular hover:underline underline-offset-8 hover:text-turquoise-100 focus:text-turquoise-100
     }
 
+    .href-link {
+        @apply text-turquoise-500 bg-dark-teal coolvetica-regular hover:underline underline-offset-8 hover:text-turquoise-300 focus:text-turquoise-300
+    }
+
+    .privacy-policy-header {
+        @apply px-2 pt-1 pb-2 text-2xl lg:text-center text-white bg-dark-teal coolvetica-regular
+    }
+
     .btn-primary {
         @apply px-6 py-3 text-xl transition-all bg-white rounded-full text-dark-teal coolvetica-bold hover:bg-turquoise-100 focus:bg-turquoise-100
     }
 
+    .basic-text {
+        @apply text-white coolvetica-regular text-weight-normal
+    }
     #__modal-container {
         @apply fixed table h-full w-full top-0 left-0 scale-0 z-[999]
     }

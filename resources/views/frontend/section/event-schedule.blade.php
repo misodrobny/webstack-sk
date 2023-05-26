@@ -5,7 +5,7 @@
             @include('frontend.component.HeaderSection', ['titleHeader' => '_event-schedule'])
             <p
                 class="coolvetica-bold text-[20px] leading-[30px] md:text-[36px] md:leading-[44px] tracking-[-0.02em] text-dark-teal">
-                27_09_2023_ / hubhub bratislava_
+                28_09_2023_ / hubhub bratislava_
             </p>
         </div>
 
@@ -36,12 +36,12 @@
                     <div>
                         <h5
                             class="text-turquoise-500 pt-1 bg-dark-teal coolvetica-regular text-2xl md:text-[36px] md:leading-[44px] tracking-[-0.02em] mb-[6px] md:mb-3 w-max">
-                            All my mistakes
+                            Eating your own dog food
                         </h5>
                         <div class="inline-flex items-center text-lg md:text-xl text-dark-teal">
                             by &VeryThinSpace;
                             <span class="coolvetica-regular text-dark-teal">
-                                Nuno Maduro &nbsp; · &nbsp;
+                                Michi Hoffmann &nbsp; · &nbsp;
                             </span>
                             <span class="coolvetica-book text-dark-teal">
                                 30 min + 15 min QA
@@ -57,12 +57,12 @@
                     <div>
                         <h5
                             class="text-turquoise-500 pt-1 bg-dark-teal coolvetica-regular text-2xl md:text-[36px] md:leading-[44px] tracking-[-0.02em] mb-[6px] md:mb-3 w-max">
-                            The future of PEST
+                            TBA
                         </h5>
                         <div class="inline-flex items-center text-lg md:text-xl text-dark-teal">
                             by &VeryThinSpace;
                             <span class="coolvetica-regular text-dark-teal">
-                                Mateus Guimarães &nbsp; · &nbsp;
+                                You? &nbsp; · &nbsp;
                             </span>
                             <span class="coolvetica-book text-dark-teal">
                                 30 min + 15 min QA
@@ -95,12 +95,12 @@
                     <div>
                         <h5
                             class="text-turquoise-500 pt-1 bg-dark-teal coolvetica-regular text-2xl md:text-[36px] md:leading-[44px] tracking-[-0.02em] mb-[6px] md:mb-3 w-max">
-                            My Mental Health Odyssey
+                            TBA
                         </h5>
                         <div class="inline-flex items-center text-lg md:text-xl text-dark-teal">
                             by &VeryThinSpace;
                             <span class="coolvetica-regular text-dark-teal">
-                                Francisco Madeira &nbsp; · &nbsp;
+                                You? &nbsp; · &nbsp;
                             </span>
                             <span class="coolvetica-book text-dark-teal">
                                 30 min + 15 min QA

@@ -80,13 +80,48 @@
                     <img src="../assets/svgs/ic-arrow-upright-small.svg" class="absolute bottom-0 left-0 z-10"
                         alt="">
                 </a>
+                <a data-fancybox="prevEventGallery" href="../assets/images/gallery-4.jpg"
+                   class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
+                   style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
+                    <img src="../assets/images/gallery-4.jpg" class="object-cover w-full h-full" alt="">
+                    <img src="../assets/svgs/ic-arrow-upright-small.svg" class="absolute bottom-0 left-0 z-10"
+                         alt="">
+                </a>
+                <a data-fancybox="prevEventGallery" href="../assets/images/gallery-5.jpg"
+                   class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
+                   style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
+                    <img src="../assets/images/gallery-5.jpg" class="object-cover w-full h-full" alt="">
+                    <img src="../assets/svgs/ic-arrow-upright-small.svg" class="absolute bottom-0 left-0 z-10"
+                         alt="">
+                </a>
+                <a data-fancybox="prevEventGallery" href="../assets/images/gallery-6.jpg"
+                                       class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
+                                       style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
+                    <img src="../assets/images/gallery-6.jpg" class="object-cover w-full h-full" alt="">
+                    <img src="../assets/svgs/ic-arrow-upright-small.svg" class="absolute bottom-0 left-0 z-10"
+                         alt="">
+                </a>
+                <a data-fancybox="prevEventGallery" href="../assets/images/gallery-7.jpg"
+                   class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
+                   style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
+                    <img src="../assets/images/gallery-7.jpg" class="object-cover w-full h-full" alt="">
+                    <img src="../assets/svgs/ic-arrow-upright-small.svg" class="absolute bottom-0 left-0 z-10"
+                         alt="">
+                </a>
+                <a data-fancybox="prevEventGallery" href="../assets/images/gallery-8.jpg"
+                   class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
+                   style="clip-path: polygon(20% 0%, 100% 0.8%, 100% 100%, 0% 100%, 0% 20%);">
+                    <img src="../assets/images/gallery-8.jpg" class="object-cover w-full h-full" alt="">
+                    <img src="../assets/svgs/ic-arrow-upright-small.svg" class="absolute bottom-0 left-0 z-10"
+                         alt="">
+                </a>
 
                 {{-- Plus thumbs --}}
-                <a href="#" class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"
-                    style="clip-path: polygon(100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 0%);">
-                    <img src="../assets/svgs/ic-plus.svg"
-                        class="absolute z-10 translate-x-1/2 translate-y-1/2 bottom-1/2 right-1/2" alt="">
-                </a>
+{{--                <a href="#" class="w-[134px] h-[134px] relative bg-dark-teal overflow-hidden mr-6"--}}
+{{--                    style="clip-path: polygon(100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 0%);">--}}
+{{--                    <img src="../assets/svgs/ic-plus.svg"--}}
+{{--                        class="absolute z-10 translate-x-1/2 translate-y-1/2 bottom-1/2 right-1/2" alt="">--}}
+{{--                </a>--}}
             </div>
         </div>
 
@@ -124,7 +159,7 @@
 
         // Prev event video
         $('#btnPlayPrevEvent').on('click', () => {
-            $embedId = 'daj9TVwlWb0'
+            $embedId = 'T6_Cd6ppc3g'
             $iframeSrc =
                 `https://www.youtube.com/embed/${$embedId}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;autoplay=1`
 
