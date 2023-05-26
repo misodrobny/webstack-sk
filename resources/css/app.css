@@ -130,6 +130,46 @@
     #__modal-container .modal-body {
         @apply bg-turquoise-500 relative p-7 md:p-20 w-full max-w-[710px] mx-auto
     }
+
+    #__modal-container {
+        @apply fixed table h-full w-full top-0 left-0 scale-0 z-[999]
+    }
+
+    /* modal animation */
+    #__speaker-detail-modal-container.animation-unfolding {
+        @apply scale-y-[0.01] scale-x-0;
+        animation:unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+
+    #__speaker-detail-modal-container.animation-unfolding .modal-background .modal-body {
+        transform:scale(0);
+        animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+
+    #__speaker-detail-modal-container.animation-unfolding.out {
+        transform:scale(1);
+        animation:unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+
+    #__speaker-detail-modal-container.animation-unfolding.out .modal-background .modal-body {
+        animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+
+    #__speaker-detail-modal-container .modal-background {
+        @apply bg-dark-teal table-cell w-full
+    }
+
+    #__speaker-detail-modal-container .modal-content {
+        @apply pt-16 pb-[95px] relative z-20
+    }
+
+    #__speaker-detail-modal-container .modal-header {
+        @apply flex items-center justify-between mb-10 md:mb-20 container
+    }
+
+    #__speaker-detail-modal-container .modal-body {
+        @apply bg-turquoise-500 relative p-7 md:p-20 w-full max-w-[710px] mx-auto
+    }
 }
 
 @layer utilities {

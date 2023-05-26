@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProposeTalkController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,7 @@ Route::get('/', function () {
 Route::get('privacy-policy', function () {
     return view('frontend.page.privacy');
 })->name('privacy-policy');
+
+
+Route::post('propose-talk', ProposeTalkController::class)
+    ->name('propose-talk');

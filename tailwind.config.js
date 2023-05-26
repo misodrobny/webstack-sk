@@ -28,7 +28,8 @@ export default {
                     900: "#004D3F",
                 },
                 "dark-teal": "#002B2E",
-                gold: "#FFB500"
+                gold: "#FFB500",
+                red: "#cc0000"
             }
         },
     },
