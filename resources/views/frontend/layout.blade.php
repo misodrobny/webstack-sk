@@ -14,6 +14,7 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+        <script defer data-domain="webstack.sk" src="https://plausible.io/js/script.js"></script>
 
         @stack('css')
 
