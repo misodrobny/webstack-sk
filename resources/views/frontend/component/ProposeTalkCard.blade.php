@@ -1,10 +1,10 @@
 <div class="flex flex-col mr-4 lg:mr-12 w-full max-w-[274px] lg:max-w-[374px] group lg:even:mt-11">
-    <a href="#" class="w-full">
+    <a href="#" data-propose-talk class="w-full">
         <img src="{{ asset('assets/images/default-avatar.png') }}"
             class="w-full h-[290px] md:h-[363px] object-cover top-left-triangle" alt="">
     </a>
     <div class="pt-[22px] pb-6 lg:pt-10 lg:px-11 lg:pb-11 px-6 bg-dark-teal group bottom-right-triangle-sm">
-        <a href="#" class="w-max">
+        <a href="#" data-propose-talk class="w-max">
             <h5
                 class="md:max-w-[280px] w-max md:w-full relative coolvetica-regular text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] text-turquoise-500">
                 [your_name]
