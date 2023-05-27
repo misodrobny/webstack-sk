@@ -5,7 +5,7 @@
             <div class="modal-header">
                 <h3
                 class="text-turquoise-500 coolvetica-bold text-[48px] leading-[44px] md:text-[84px] md:leading-[90px] tracking-[-0.02em]">
-                    _details
+                    _about-speaker
                 </h3>
                 <div id="close-speaker-detail">
                     @component('frontend.component.ws-button-icon')
@@ -15,21 +15,29 @@
                 </div>
             </div>
             <div class="modal-body" style="clip-path: polygon(100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 0%);">
-                <p class="coolvetica-book text-lg md:text-xl md:leading-[30px] mb-10 text-dark-teal">
-                    Calling Laravel experts and software developers! Share your insights and experiences with us. <span class="coolvetica-bold">Submit your talk proposal today for a chance to speak at our conference!</span>
-                </p>
-                <form action="" class="flex flex-col gap-10">
-                    <input type="text" name="name" id="name" placeholder="First and last name" class="outline-none py-[17px] coolvetica-regular text-xl text-dark-teal bg-transparent border-b-[3px] border-b-dark-teal placeholder-dark-teal">
-                    <div class="grid gap-10 md:grid-cols-2">
-                        <input type="email" name="email" id="email" placeholder="E-mail" class="outline-none py-[17px] coolvetica-regular text-xl text-dark-teal bg-transparent border-b-[3px] border-b-dark-teal placeholder-dark-teal">
-                        <input type="text" name="twitter" id="twitter" placeholder="Twitter" class="outline-none py-[17px] coolvetica-regular text-xl text-dark-teal bg-transparent border-b-[3px] border-b-dark-teal placeholder-dark-teal">
+                <div class="grid gap-10 md:grid-cols-[30%_70%] border-b-[3px] pb-[35px] border-b-dark-teal">
+                    <div>
+                        <img src="{{ asset('assets/images/default-avatar.png') }}" class="w-[171px] h-[171px] md:h-[171px] object-cover top-left-triangle" alt="">
+                        <div class="flex items-center gap-3 mt-6">
+                            <img src="{{ asset('assets/svgs/logo-twitter-dark.svg') }}" alt="">
+                            <a href="{{ 'https://twitter.com/cleptric' }}" target="_blank">
+                                <p class="text-base md:text-lg text-dark-teal coolvetica-book">
+                                    /cleptric
+                                </p>
+                            </a>
+                        </div>
                     </div>
-                    <input type="text" name="topic" id="topic" placeholder="Topic" class="outline-none py-[17px] coolvetica-regular text-xl text-dark-teal bg-transparent border-b-[3px] border-b-dark-teal placeholder-dark-teal">
-                    <textarea name="abstract" id="" rows="3" class="outline-none py-[17px] coolvetica-regular text-xl text-dark-teal bg-transparent border-b-[3px] border-b-dark-teal placeholder-dark-teal" placeholder="Abstract"></textarea>
-                    <button type="submit" class="px-6 py-3 bg-white coolvetica-bold text-dark-teal w-max">
-                        type='submit'
-                    </button>
-                </form>
+                    <div>
+                        <h5 class="coolvetica-regular text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] mb-10">Michi Hoffmann</h5>
+                        <span class="coolvetica-book text-[20px] leading-[30px] font-bold">[BIO] </span><span class="coolvetica-book text-[20px] leading-[30px] font-normal">Born and raised in Munich, Michi currently resides in Vienna, working as a software engineer at Sentry.
+                            While not pocking around in PHP & Go, he sometimes endeavours into the frontend world as well, still missing the good old jQuery days.</span>
+                    </div>
+                </div>
+                <p class="coolvetica-bold text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] mt-10 mb-6">14:15 CET</p>
+                <span class="coolvetica-regular text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] bg-dark-teal text-turquoise-500">Eating your own dog food</span>
+                <p class="coolvetica-book text-[20px] leading-[30px] font-normal mt-6">
+                    Building SDKs to be used by other developers is all great fun, but at one point you also need to test out your work in a real application. Does the thing you build actually work in the wild? Is it easy to use, or did you just build something utterly bad? We’ll take a look at building Sentry’s appreciation Slack app called GibPotato, an over-engineered, micro-service-orientated behemoth of CakePHP, Go, and Vue.js. that was built for the sole purpose of trying out our SDKs that use a programming language that is not part of Sentry’s tech stack.
+                </p>
             </div>
         </div>
     </div>
