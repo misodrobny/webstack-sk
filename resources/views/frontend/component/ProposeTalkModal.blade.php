@@ -122,6 +122,11 @@
             $("#propose-talk-header").show();
             $("#propose-talk-success").html('').hide();
 
+            $('#proposeTalkForm').find('input, textarea').removeClass('border-b-red');
+            $('#proposeTalkForm').find('input, textarea').addClass('border-b-dark-teal');
+            $('#submitButton').attr("disabled", false);
+            $('.has-error').remove();
+
             $('#__modal-container').addClass('out');
             $('body').removeClass('overflow-hidden');
         });
