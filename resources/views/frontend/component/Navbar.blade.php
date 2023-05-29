@@ -1,4 +1,4 @@
-<nav id="navigationBar" class="top-0 z-20 w-full transition-all lg:py-8 sticky">
+<nav id="navigationBar" class="top-0 z-20 w-full transition-all lg:py-8 lg:sticky">
     <div class="container flex flex-col items-center w-full lg:justify-between lg:flex-row">
         {{-- <!-- App Logo & Mobile nav toggler --> --}}
         <div class="relative inline-flex items-center justify-between w-full py-4 lg:w-auto lg:py-0">
@@ -18,7 +18,7 @@
         {{-- <!-- Nav Menu - Hidden on mobile --> --}}
         <div class="hidden lg:block absolute top-0 z-30 pt-[22px] lg:pt-0 pl-8 lg:pl-0 lg:static border-l-[16px] border-l-turquoise-500 lg:border-none bg-dark-teal lg:bg-transparent overflow-y-auto w-full h-full lg:w-auto lg:h-auto left-full lg:left-0 transition-all duration-300"
             id="__navMenus">
-            <div class="flex flex-col gap-8 lg:items-center lg:flex-row h-full">
+            <div class="flex flex-col h-full gap-8 lg:items-center lg:flex-row">
                 <div class="inline-flex items-center lg:hidden">
                     <p class="text-white coolvetica-bold text-[48px] leading-[44px] tracking-[-0.02em]">
                         _nav
@@ -36,7 +36,7 @@
                 <a href="#" class="nav-link" data-propose-talk>
                     /?propose-a-talk
                 </a>
-                <a target="_blank" href="https://www.inviton.eu/e-14216/webstack" class="btn-primary w-max" id="bookTicketBtn">
+                <a href="https://www.inviton.eu/e-14216/webstack" class="btn-primary w-max" id="bookTicketBtn">
                     /book-tickets
                 </a>
 
@@ -125,8 +125,6 @@
                         $('#__appLogo').removeAttr("style")
                         navigationBar.removeAttr("style")
                     }
-                } else {
-                    navigationBar.removeClass('sticky')
                 }
             })
         })
