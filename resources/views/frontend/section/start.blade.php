@@ -52,7 +52,7 @@
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
         const typeHeadline = new TypeIt("#heroHeadline", {
-            speed: 100,
+            speed: 65,
             startDelay: 900,
         })
             .type('_web <br class="hidden lg:block">', {delay: 100})
