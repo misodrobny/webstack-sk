@@ -36,7 +36,7 @@
                 <a href="#" class="nav-link" data-propose-talk>
                     /?propose-a-talk
                 </a>
-                <a href="#book-tickets" class="btn-primary w-max" id="bookTicketBtn">
+                <a target="_blank" href="https://www.inviton.eu/e-14216/webstack" class="btn-primary w-max" id="bookTicketBtn">
                     /book-tickets
                 </a>
 
