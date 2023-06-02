@@ -9,7 +9,7 @@
                 {{-- Card - Speaker 1 --}}
                 @component('frontend.component.SpeakerCard')
                     @slot('routeLink', '#redirectLink')
-                    @slot('photo', asset('assets/images/default-avatar.png'))
+                    @slot('photo', asset('assets/images/michi-profile.svg'))
                     @slot('name', 'Michi Hoffmann')
                     @slot('role', 'Software Engineer at Sentry')
                     @slot('twitterAccount', 'cleptric')

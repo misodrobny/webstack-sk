@@ -14,7 +14,7 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
 
-        <meta property="og:title" content="Webstack | Landing Page">
+        <meta property="og:title" content="Webstack">
         <meta property="og:description" content="_web developers conference not only for laravel artisans_">
         <meta property="og:type" content="website">
         <meta property="og:image" content="{{ asset('assets/images/webstack_panel.jpg') }}"/>
@@ -22,7 +22,7 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@webstack_sk">
         <meta name="twitter:creator" content="@dr0b0">
-        <meta name="twitter:title" content="Webstack | Landing page">
+        <meta name="twitter:title" content="Webstack">
         <meta name="twitter:description" content="_web developers conference not only for laravel artisans_">
         <meta name="twitter:image" content="{{ asset('assets/images/webstack_panel.jpg') }}">
 

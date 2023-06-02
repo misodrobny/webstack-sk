@@ -17,7 +17,7 @@
             <div class="modal-body" style="clip-path: polygon(100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 0%);">
                 <div class="grid gap-10 md:grid-cols-[30%_70%] border-b-[3px] pb-[35px] border-b-dark-teal">
                     <div>
-                        <img src="{{ asset('assets/images/default-avatar.png') }}" class="w-[171px] h-[171px] md:h-[171px] object-cover top-left-triangle" alt="">
+                        <img src="{{ asset('assets/images/michi-profile.svg') }}" class="w-[171px] h-[171px] md:h-[171px] object-cover top-left-triangle" alt="">
                         <div class="flex items-center gap-3 mt-6">
                             <img src="{{ asset('assets/svgs/logo-twitter-dark.svg') }}" alt="">
                             <a href="{{ 'https://twitter.com/cleptric' }}" target="_blank">
