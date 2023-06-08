@@ -69,11 +69,6 @@
     .coolvetica-heavy {
         font-family: "Coolvetica Hv" !important;
     }
-
-    .grecaptcha-badge {
-        display: none !important;
-        visibility: hidden;
-    }
 }
 
 @layer components {
