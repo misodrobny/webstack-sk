@@ -17,26 +17,27 @@
             <div class="modal-body" style="clip-path: polygon(100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 0%);">
                 <div class="grid gap-10 md:grid-cols-[30%_70%] border-b-[3px] pb-[35px] border-b-dark-teal">
                     <div>
-                        <img src="{{ asset('assets/images/michi-profile.svg') }}" class="w-[171px] h-[171px] md:h-[171px] object-cover top-left-triangle" alt="">
-                        <div class="flex items-center gap-3 mt-6">
+                        <img data-add-speaker-image src="" class="w-[171px] h-[171px] md:h-[171px] object-cover top-left-triangle" alt="">
+                        <div class="flex items-center gap-3 mt-6" data-add-speaker-twitter>
                             <img src="{{ asset('assets/svgs/logo-twitter-dark.svg') }}" alt="">
-                            <a href="{{ 'https://twitter.com/cleptric' }}" target="_blank">
-                                <p class="text-base md:text-lg text-dark-teal coolvetica-book">
-                                    /cleptric
+                            <a data-add-speaker-twitter-url href="" target="_blank">
+                                <p data-add-speaker-twitter-name class="text-base md:text-lg text-dark-teal coolvetica-book">
+
                                 </p>
                             </a>
                         </div>
                     </div>
                     <div>
-                        <h5 class="coolvetica-regular text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] mb-10">Michi Hoffmann</h5>
-                        <span class="coolvetica-book text-[20px] leading-[30px] font-bold">[BIO] </span><span class="coolvetica-book text-[20px] leading-[30px] font-normal">Born and raised in Munich, Michi currently resides in Vienna, working as a software engineer at Sentry.
-                            While not pocking around in PHP & Go, he sometimes endeavours into the frontend world as well, still missing the good old jQuery days.</span>
+                        <h5 data-add-speaker-name class="coolvetica-regular text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] mb-10"></h5>
+                        <span class="coolvetica-book text-[20px] leading-[30px] font-bold">[BIO] </span><span data-add-speaker-bio class="coolvetica-book text-[20px] leading-[30px] font-normal">
+
+                        </span>
                     </div>
                 </div>
-                <p class="coolvetica-bold text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] mt-10 mb-6">14:15 CET</p>
-                <span class="coolvetica-regular text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] bg-dark-teal text-turquoise-500">Eating your own dog food</span>
-                <p class="coolvetica-book text-[20px] leading-[30px] font-normal mt-6">
-                    Building SDKs to be used by other developers is all great fun, but at one point you also need to test out your work in a real application. Does the thing you build actually work in the wild? Is it easy to use, or did you just build something utterly bad? We’ll take a look at building Sentry’s appreciation Slack app called GibPotato, an over-engineered, micro-service-orientated behemoth of CakePHP, Go, and Vue.js. that was built for the sole purpose of trying out our SDKs that use a programming language that is not part of Sentry’s tech stack.
+                <p data-add-talk-time class="coolvetica-bold text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] mt-10 mb-6">14:15 CET</p>
+                <span data-add-talk-title class="coolvetica-regular text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] bg-dark-teal text-turquoise-500"></span>
+                <p data-add-talk-content class="coolvetica-book text-[20px] leading-[30px] font-normal mt-6">
+                    
                 </p>
             </div>
         </div>
@@ -50,6 +51,29 @@
         $('[data-speaker-detail]').click(function(){
             $('#__speaker-detail-modal-container').removeAttr('class').addClass('animation-unfolding');
             $('body').addClass('overflow-hidden');
+            let dataSpeakerImage = $(this).find('[data-speaker-image]').attr('src');
+            let dataSpeakerName = $(this).find('[data-speaker-name]').html();
+            let dataSpeakerRole = $(this).find('[data-speaker-role]').html();
+            let dataSpeakerBio = $(this).find('[data-speaker-bio]').html();
+            let dataTalkTitle = $(this).find('[data-talk-title]').html();
+            let dataTalkTime = $(this).find('[data-talk-time]').html();
+            let dataTalkContent = $(this).find('[data-talk-content]').html();
+            let dataSpeakerTwitter = $(this).find('[data-speaker-twitter]').html();
+
+            $('[data-add-speaker-image]').attr('src', dataSpeakerImage);
+            $('[data-add-speaker-name]').html(dataSpeakerName);
+            $('[data-add-speaker-role]').html(dataSpeakerRole);
+            $('[data-add-speaker-bio]').html(dataSpeakerBio);
+            $('[data-add-talk-title]').html(dataTalkTitle);
+            $('[data-add-talk-time]').html(dataTalkTime);
+            $('[data-add-talk-content]').html(dataTalkContent);
+            if (dataSpeakerTwitter == "") {
+                $('[data-add-speaker-twitter]').addClass('hidden');
+            } else {
+                $('[data-add-speaker-twitter]').removeClass('hidden');
+                $('[data-add-speaker-twitter-url]').attr('src', "https://twitter.com/" + dataSpeakerTwitter);
+                $('[data-add-speaker-twitter-name]').html("/" + dataSpeakerTwitter);
+            }
         })
 
         $('#close-speaker-detail').click(function(){

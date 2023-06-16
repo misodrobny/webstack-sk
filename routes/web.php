@@ -22,6 +22,5 @@ Route::get('privacy-policy', function () {
     return view('frontend.page.privacy');
 })->name('privacy-policy');
 
-
 Route::post('propose-talk', ProposeTalkController::class)
     ->name('propose-talk');

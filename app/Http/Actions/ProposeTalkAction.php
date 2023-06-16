@@ -13,10 +13,10 @@ class ProposeTalkAction
         $timestamp = date('U');
         Storage::put("propose_$timestamp.txt", $dto->toEmail());
 
-        Mail::raw($dto->toEmail(), function($message) use ($dto) {
-            $message -> from('propose.talk@webstack.sk', 'Propose Talk Webstack');
-            $message -> to(config('mail.to'));
-            $message -> subject('Proposed talk - ' . $dto->name);
+        Mail::raw($dto->toEmail(), function ($message) use ($dto) {
+            $message->from('propose.talk@webstack.sk', 'Propose Talk Webstack');
+            $message->to(config('mail.to'));
+            $message->subject('Proposed talk - '.$dto->name);
         });
     }
 }

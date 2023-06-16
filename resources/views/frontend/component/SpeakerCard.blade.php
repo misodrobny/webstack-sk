@@ -4,7 +4,14 @@
 
 <div class="flex flex-col mr-4 lg:mr-12 w-full max-w-[274px] lg:max-w-[374px] group lg:even:mt-11">
     <a href="#" data-speaker-detail class="w-full">
-        <img src="{{ $photo }}" class="w-full h-[290px] md:h-[363px] object-cover top-left-triangle" alt="">
+        <img data-speaker-image src="{{ $photo }}" class="w-full h-[290px] md:h-[363px] object-cover top-left-triangle" alt="">
+        <span class="hidden" data-speaker-name>{{ $name }}</span>
+        <span class="hidden" data-speaker-role>{{ $role }}</span>
+        <span class="hidden" data-speaker-bio>{{ $bio }}</span>
+        <span class="hidden" data-speaker-twitter>{{ $twitterAccount ?? '' }}</span>
+        <span class="hidden" data-talk-title>{{ $talkTitle }}</span>
+        <span class="hidden" data-talk-time>{{ $talkTime }}</span>
+        <span class="hidden" data-talk-content>{{ $talk }}</span>
     </a>
     <div class="pt-[22px] pb-6 lg:pt-10 lg:px-11 lg:pb-11 px-6 bg-dark-teal group bottom-right-triangle-sm">
         <a href="#" data-speaker-detail class="w-max">
@@ -25,13 +32,15 @@
         </p>
 
         {{-- <!-- Twitter Acc --> --}}
-        <div class="flex items-center gap-3 mt-6">
-            <img src="{{ asset('assets/svgs/logo-twitter.svg') }}" alt="">
-            <a href="{{ 'https://twitter.com/' . $twitterAccount }}" target="_blank">
-                <p class="text-base md:text-lg text-turquoise-500 coolvetica-book">
-                    /{{ $twitterAccount }}
-                </p>
-            </a>
-        </div>
+            <div class="flex items-center gap-3 mt-6">
+                @if($twitterAccount)
+                <img src="{{ asset('assets/svgs/logo-twitter.svg') }}" alt="">
+                <a href="{{ 'https://twitter.com/' . $twitterAccount }}" target="_blank">
+                    <p class="text-base md:text-lg text-turquoise-500 coolvetica-book">
+                        /{{ $twitterAccount }}
+                    </p>
+                </a>
+                @endif
+            </div>
     </div>
 </div>

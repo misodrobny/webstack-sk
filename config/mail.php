@@ -103,7 +103,7 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
-    'to' => env('MAIL_TO',null),
+    'to' => env('MAIL_TO', null),
 
     /*
     |--------------------------------------------------------------------------

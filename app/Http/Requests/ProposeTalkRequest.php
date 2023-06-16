@@ -15,7 +15,7 @@ class ProposeTalkRequest extends FormRequest
             'twitter' => ['nullable', 'string', 'max:254'],
             'topic' => ['required', 'string', 'max:254'],
             'abstract' => ['required', 'string', 'max:65000'],
-            'g-recaptcha-response' => ['required', 'recaptchav3:send_email,0.5']
+            'g-recaptcha-response' => ['required', 'recaptchav3:send_email,0.5'],
         ];
     }
 

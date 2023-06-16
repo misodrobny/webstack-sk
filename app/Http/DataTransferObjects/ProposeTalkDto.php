@@ -15,10 +15,10 @@ class ProposeTalkDto
 
     public function toEmail(): string
     {
-        return $this->name . PHP_EOL .
-            $this->email . PHP_EOL .
-            $this->twitter . PHP_EOL . PHP_EOL .
-            $this->topic . PHP_EOL . PHP_EOL .
+        return $this->name.PHP_EOL.
+            $this->email.PHP_EOL.
+            $this->twitter.PHP_EOL.PHP_EOL.
+            $this->topic.PHP_EOL.PHP_EOL.
             $this->abstract;
     }
 }

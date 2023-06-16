@@ -12,7 +12,24 @@
                     @slot('photo', asset('assets/images/michi-profile.svg'))
                     @slot('name', 'Michi Hoffmann')
                     @slot('role', 'Software Engineer at Sentry')
+                    @slot('bio', 'Born and raised in Munich, Michi currently resides in Vienna, working as a software engineer at Sentry. While not pocking around in PHP & Go, he sometimes endeavours into the frontend world as well, still missing the good old jQuery days.')
+                    @slot('talkTime','14:15 CET')
+                    @slot('talkTitle','Eating your own dog food')
+                    @slot('talk', 'Building SDKs to be used by other developers is all great fun, but at one point you also need to test out your work in a real application. Does the thing you build actually work in the wild? Is it easy to use, or did you just build something utterly bad? We’ll take a look at building Sentry’s appreciation Slack app called GibPotato, an over-engineered, micro-service-orientated behemoth of CakePHP, Go, and Vue.js. that was built for the sole purpose of trying out our SDKs that use a programming language that is not part of Sentry’s tech stack.')
                     @slot('twitterAccount', 'cleptric')
+                @endcomponent
+
+                {{-- Card - Speaker 2 --}}
+                @component('frontend.component.SpeakerCard')
+                    @slot('routeLink', '#redirectLink')
+                    @slot('photo', asset('assets/images/default-avatar.png'))
+                    @slot('name', 'Matus Poruben')
+                    @slot('role', 'Frontend Tech & Team lead at Websupport')
+                    @slot('bio', '24-year-old Front-End Team Lead at WebSupport, specializing in Vue.js development. With a passion for coding that began at the age of 15. Matus accumulated years of experience in the field. His expertise extends beyond web development, and also have a history of writing mobile apps using Ionic. Additionally, I had the opportunity to share my knowledge as a coding teacher for a brief period of time, helping to inspire and guide students in their coding journey. With a strong commitment to continuous learning and staying up-to-date with the industry, I am dedicated to delivering high-quality solutions and leading successful front-end projects.')
+                    @slot('talkTime','15:00 CET')
+                    @slot('talkTitle','Building Scalable FE')
+                    @slot('talk', 'Building SDKs to be used by other developers is all great fun, but at one point you also need to test out your work in a real application. Does the thing you build actually work in the wild? Is it easy to use, or did you just build something utterly bad? We’ll take a look at building Sentry’s appreciation Slack app called GibPotato, an over-engineered, micro-service-orientated behemoth of CakePHP, Go, and Vue.js. that was built for the sole purpose of trying out our SDKs that use a programming language that is not part of Sentry’s tech stack.')
+                    @slot('twitterAccount', null)
                 @endcomponent
 
                 {{-- Card - Proposal --}}

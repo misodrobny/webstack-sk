@@ -57,12 +57,12 @@
                     <div>
                         <h5
                             class="text-turquoise-500 pt-1 bg-dark-teal coolvetica-regular text-2xl md:text-[36px] md:leading-[44px] tracking-[-0.02em] mb-[6px] md:mb-3 w-max">
-                            TBA
+                            Building Scalable FE
                         </h5>
                         <div class="inline-flex items-center text-lg md:text-xl text-dark-teal">
                             by &VeryThinSpace;
                             <span class="coolvetica-regular text-dark-teal">
-                                You? &nbsp; · &nbsp;
+                                Matus Poruben &nbsp; · &nbsp;
                             </span>
                             <span class="coolvetica-book text-dark-teal">
                                 30 min + 15 min QA

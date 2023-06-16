@@ -40,7 +40,7 @@
                 visibility: hidden;
             }
         </style>
-        
+
         @stack('css')
 
         {!! RecaptchaV3::initJs() !!}
