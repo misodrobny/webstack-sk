@@ -8,6 +8,7 @@
             <div id="speakerCards">
                 {{-- Card - Speaker 1 --}}
                 @component('frontend.component.SpeakerCard')
+                    @slot('id', 'michi')
                     @slot('routeLink', '#redirectLink')
                     @slot('photo', asset('assets/images/michi-profile.svg'))
                     @slot('name', 'Michi Hoffmann')
@@ -21,14 +22,15 @@
 
                 {{-- Card - Speaker 2 --}}
                 @component('frontend.component.SpeakerCard')
+                    @slot('id', 'matus')
                     @slot('routeLink', '#redirectLink')
                     @slot('photo', asset('assets/images/default-avatar.png'))
                     @slot('name', 'Matus Poruben')
                     @slot('role', 'Frontend Tech & Team lead at Websupport')
-                    @slot('bio', '24-year-old Front-End Team Lead at WebSupport, specializing in Vue.js development. With a passion for coding that began at the age of 15. Matus accumulated years of experience in the field. His expertise extends beyond web development, and also have a history of writing mobile apps using Ionic. Additionally, I had the opportunity to share my knowledge as a coding teacher for a brief period of time, helping to inspire and guide students in their coding journey. With a strong commitment to continuous learning and staying up-to-date with the industry, I am dedicated to delivering high-quality solutions and leading successful front-end projects.')
+                    @slot('bio', '24-year-old Front-End Team Lead at WebSupport, specializing in Vue.js development. With a passion for coding that began at the age of 15. Matus accumulated years of experience in the field. His expertise extends beyond web development, and also have a history of writing mobile apps using Ionic. Additionally, he had the opportunity to share his knowledge as a coding teacher for a brief period of time, helping to inspire and guide students in their coding journey. With a strong commitment to continuous learning and staying up-to-date with the industry,')
                     @slot('talkTime','15:00 CET')
                     @slot('talkTitle','Building Scalable FE')
-                    @slot('talk', 'Building SDKs to be used by other developers is all great fun, but at one point you also need to test out your work in a real application. Does the thing you build actually work in the wild? Is it easy to use, or did you just build something utterly bad? We’ll take a look at building Sentry’s appreciation Slack app called GibPotato, an over-engineered, micro-service-orientated behemoth of CakePHP, Go, and Vue.js. that was built for the sole purpose of trying out our SDKs that use a programming language that is not part of Sentry’s tech stack.')
+                    @slot('talk', 'Discover the power of NPM packages and Web Components in constructing a scalable front-end architecture. This presentation explores how leveraging NPM packages enhances code modularity and streamlines development, while Web Components enable the creation of reusable UI elements. Learn best practices for project structuring and maintainability. Join us as we explore practical implementation strategies to build a scalable front-end architecture that meets the evolving demands of modern web development.')
                     @slot('twitterAccount', null)
                 @endcomponent
 
@@ -36,20 +38,20 @@
                 @include('frontend.component.ProposeTalkCard')
             </div>
 
-{{--            --}}{{-- Trigger Next --}}
-{{--            <div class="absolute -translate-y-1/2 top-1/2 lg:right-[200px]" id="pseudoNextSlide">--}}
-{{--                @component('frontend.component.ws-button-icon')--}}
-{{--                    @slot('icon', asset('assets/svgs/ic-arrow-right.svg'))--}}
-{{--                    @slot('layer', 'light')--}}
-{{--                @endcomponent--}}
-{{--            </div>--}}
-{{--            --}}{{-- Trigger Prev --}}
-{{--            <div class="absolute hidden -translate-y-1/2 top-1/2 lg:left-32" id="pseudoPrevSlide">--}}
-{{--                @component('frontend.component.ws-button-icon')--}}
-{{--                    @slot('icon', asset('assets/svgs/ic-arrow-left.svg'))--}}
-{{--                    @slot('layer', 'light')--}}
-{{--                @endcomponent--}}
-{{--            </div>--}}
+{{--             Trigger Next--}}
+            <div class="absolute -translate-y-1/2 top-1/2 lg:right-[200px]" id="pseudoNextSlide">
+                @component('frontend.component.ws-button-icon')
+                    @slot('icon', asset('assets/svgs/ic-arrow-right.svg'))
+                    @slot('layer', 'light')
+                @endcomponent
+            </div>
+{{--             Trigger Prev--}}
+            <div class="absolute hidden -translate-y-1/2 top-1/2 lg:left-32" id="pseudoPrevSlide">
+                @component('frontend.component.ws-button-icon')
+                    @slot('icon', asset('assets/svgs/ic-arrow-left.svg'))
+                    @slot('layer', 'light')
+                @endcomponent
+            </div>
         </div>
 
         {{-- Next section button (Dark) --}}

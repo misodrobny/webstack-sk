@@ -51,14 +51,16 @@
         $('[data-speaker-detail]').click(function(){
             $('#__speaker-detail-modal-container').removeAttr('class').addClass('animation-unfolding');
             $('body').addClass('overflow-hidden');
-            let dataSpeakerImage = $(this).find('[data-speaker-image]').attr('src');
-            let dataSpeakerName = $(this).find('[data-speaker-name]').html();
-            let dataSpeakerRole = $(this).find('[data-speaker-role]').html();
-            let dataSpeakerBio = $(this).find('[data-speaker-bio]').html();
-            let dataTalkTitle = $(this).find('[data-talk-title]').html();
-            let dataTalkTime = $(this).find('[data-talk-time]').html();
-            let dataTalkContent = $(this).find('[data-talk-content]').html();
-            let dataSpeakerTwitter = $(this).find('[data-speaker-twitter]').html();
+            let speakerElement = $(this).data("id");
+
+            let dataSpeakerImage = $('#' + speakerElement).find('[data-speaker-image]').attr('src');
+            let dataSpeakerName = $('#' + speakerElement).find('[data-speaker-name]').html();
+            let dataSpeakerRole = $('#' + speakerElement).find('[data-speaker-role]').html();
+            let dataSpeakerBio = $('#' + speakerElement).find('[data-speaker-bio]').html();
+            let dataTalkTitle = $('#' + speakerElement).find('[data-talk-title]').html();
+            let dataTalkTime = $('#' + speakerElement).find('[data-talk-time]').html();
+            let dataTalkContent = $('#' + speakerElement).find('[data-talk-content]').html();
+            let dataSpeakerTwitter = $('#' + speakerElement).find('[data-speaker-twitter]').html();
 
             $('[data-add-speaker-image]').attr('src', dataSpeakerImage);
             $('[data-add-speaker-name]').html(dataSpeakerName);
