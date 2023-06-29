@@ -65,10 +65,10 @@
                         <label for=""
                             class="text-turquoise-500 coolvetica-regular text-lg md:text-[20px] md:leading-[30px]">rel='partner'</label>
                         {{-- <!-- Desktop icon --> --}}
-                        <img src="../assets/svgs/partner-theshop-turquoise.svg" class="mt-[14px] hidden md:block"
+                        <img src="../assets/svgs/partner-theshop-turquoise.svg" class="the-shop-image mt-[14px] hidden md:block"
                             alt="">
                         {{-- <!-- Mobile icon --> --}}
-                        <img src="../assets/svgs/partner-theshop-turquoise.svg" class="block md:hidden" alt="">
+                        <img src="../assets/svgs/partner-theshop-turquoise.svg" class="the-shop-image block md:hidden" alt="">
                     </div>
                     {{-- <!-- bottom line --> --}}
                     <div class="relative bg-[#17a68c] w-full h-[3px]">
