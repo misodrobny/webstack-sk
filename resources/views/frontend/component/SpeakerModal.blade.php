@@ -26,6 +26,14 @@
                                 </p>
                             </a>
                         </div>
+                        <div class="flex items-center gap-3 mt-6" data-add-speaker-linkedin>
+                            <img src="{{ asset('assets/svgs/logo-linkedin-dark.svg') }}" alt="">
+                            <a data-add-speaker-linkedin-url href="" target="_blank">
+                                <p data-add-speaker-linkedin-name class="text-base md:text-lg text-dark-teal coolvetica-book">
+
+                                </p>
+                            </a>
+                        </div>
                     </div>
                     <div>
                         <h5 data-add-speaker-name class="coolvetica-regular text-2xl md:text-[48px] md:leading-[44px] md:tracking-[-0.02em] mb-10"></h5>
@@ -61,6 +69,7 @@
             let dataTalkTime = $('#' + speakerElement).find('[data-talk-time]').html();
             let dataTalkContent = $('#' + speakerElement).find('[data-talk-content]').html();
             let dataSpeakerTwitter = $('#' + speakerElement).find('[data-speaker-twitter]').html();
+            let dataSpeakerLinkedin = $('#' + speakerElement).find('[data-speaker-linkedin]').html();
 
             $('[data-add-speaker-image]').attr('src', dataSpeakerImage);
             $('[data-add-speaker-name]').html(dataSpeakerName);
@@ -73,8 +82,16 @@
                 $('[data-add-speaker-twitter]').addClass('hidden');
             } else {
                 $('[data-add-speaker-twitter]').removeClass('hidden');
-                $('[data-add-speaker-twitter-url]').attr('src', "https://twitter.com/" + dataSpeakerTwitter);
+                $('[data-add-speaker-twitter-url]').attr('href', "https://twitter.com/" + dataSpeakerTwitter);
                 $('[data-add-speaker-twitter-name]').html("/" + dataSpeakerTwitter);
+            }
+
+            if (dataSpeakerLinkedin == "") {
+                $('[data-add-speaker-linkedin]').addClass('hidden');
+            } else {
+                $('[data-add-speaker-linkedin]').removeClass('hidden');
+                $('[data-add-speaker-linkedin-url]').attr('href', "https://www.linkedin.com/in/" + dataSpeakerLinkedin);
+                $('[data-add-speaker-linkedin-name]').html("/" + dataSpeakerLinkedin);
             }
         })
 

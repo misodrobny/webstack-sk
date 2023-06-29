@@ -9,6 +9,7 @@
         <span class="hidden" data-speaker-role>{{ $role }}</span>
         <span class="hidden" data-speaker-bio>{{ $bio }}</span>
         <span class="hidden" data-speaker-twitter>{{ $twitterAccount ?? '' }}</span>
+        <span class="hidden" data-speaker-linkedin>{{ $linkedinAccount ?? '' }}</span>
         <span class="hidden" data-talk-title>{{ $talkTitle }}</span>
         <span class="hidden" data-talk-time>{{ $talkTime }}</span>
         <span class="hidden" data-talk-content>{{ $talk }}</span>
