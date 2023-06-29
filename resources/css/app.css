@@ -69,6 +69,23 @@
     .coolvetica-heavy {
         font-family: "Coolvetica Hv" !important;
     }
+
+    .the-shop-image {
+        content: url('/public/assets/svgs/partner-theshop-turquoise.svg')
+    }
+
+    .the-shop-image:hover {
+        content: url('/public/assets/svgs/partner-theshop.svg')
+    }
+
+    .brackets-image {
+        content: url('/public/assets/svgs/partner-brackets-turquoise.svg')
+    }
+
+    .brackets-image:hover {
+        content: url('/public/assets/svgs/partner-brackets.svg')
+    }
+
 }
 
 @layer components {

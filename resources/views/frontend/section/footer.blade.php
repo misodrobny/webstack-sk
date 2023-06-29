@@ -36,10 +36,10 @@
                         <label for=""
                             class="text-turquoise-500 coolvetica-regular text-lg md:text-[20px] md:leading-[30px]">rel='partner'</label>
                         {{-- <!-- Desktop icon --> --}}
-                        <img src="../assets/svgs/partner-brackets-turquoise.svg" class="mt-[14px] hidden md:block"
+                        <img src="../assets/svgs/partner-brackets-turquoise.svg" class="brackets-image mt-[14px] hidden md:block"
                             alt="">
                         {{-- <!-- Mobile icon --> --}}
-                        <img src="../assets/svgs/partner-brackets-turquoise.svg" class="block md:hidden" alt="">
+                        <img src="../assets/svgs/partner-brackets-turquoise.svg" class="brackets-image block md:hidden" alt="">
                     </div>
                     {{-- <!-- bottom line --> --}}
                     <div class="relative bg-[#17a68c] w-full h-[3px]">
@@ -48,6 +48,11 @@
                     </div>
                 </div>
             </a>
+
+            @push('scripts')
+                <script type="text/javascript">
+                </script>
+            @endpush
 
             {{-- <!-- partner 2 --> --}}
             <a rel="partner" target="_blank" href="https://www.theshop.dev/"
