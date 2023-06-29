@@ -34,13 +34,22 @@
         {{-- <!-- Twitter Acc --> --}}
             <div class="flex items-center gap-3 mt-6">
                 @if($twitterAccount)
-                <img src="{{ asset('assets/svgs/logo-twitter.svg') }}" alt="">
-                <a href="{{ 'https://twitter.com/' . $twitterAccount }}" target="_blank">
-                    <p class="text-base md:text-lg text-turquoise-500 coolvetica-book">
-                        /{{ $twitterAccount }}
-                    </p>
-                </a>
+                    <img src="{{ asset('assets/svgs/logo-twitter.svg') }}" alt="">
+                    <a href="{{ 'https://twitter.com/' . $twitterAccount }}" target="_blank">
+                        <p class="text-base md:text-lg text-turquoise-500 coolvetica-book">
+                            /{{ $twitterAccount }}
+                        </p>
+                    </a>
                 @endif
+                @if($linkedinAccount)
+                    <img src="{{ asset('assets/svgs/logo-linkedin.svg') }}" alt="">
+                    <a href="{{ 'https://www.linkedin.com/in/' . $linkedinAccount }}" target="_blank">
+                        <p class="text-base md:text-lg text-turquoise-500 coolvetica-book">
+                            /{{ $linkedinAccount }}
+                        </p>
+                    </a>
+                @endif
+
             </div>
     </div>
 </div>

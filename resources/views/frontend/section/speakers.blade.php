@@ -18,6 +18,7 @@
                     @slot('talkTitle','Eating your own dog food')
                     @slot('talk', 'Building SDKs to be used by other developers is all great fun, but at one point you also need to test out your work in a real application. Does the thing you build actually work in the wild? Is it easy to use, or did you just build something utterly bad? We’ll take a look at building Sentry’s appreciation Slack app called GibPotato, an over-engineered, micro-service-orientated behemoth of CakePHP, Go, and Vue.js. that was built for the sole purpose of trying out our SDKs that use a programming language that is not part of Sentry’s tech stack.')
                     @slot('twitterAccount', 'cleptric')
+                    @slot('linkedinAccount', null)
                 @endcomponent
 
                 {{-- Card - Speaker 2 --}}
@@ -32,6 +33,7 @@
                     @slot('talkTitle','Building Scalable FE')
                     @slot('talk', 'Discover the power of NPM packages and Web Components in constructing a scalable front-end architecture. This presentation explores how leveraging NPM packages enhances code modularity and streamlines development, while Web Components enable the creation of reusable UI elements. Learn best practices for project structuring and maintainability. Join us as we explore practical implementation strategies to build a scalable front-end architecture that meets the evolving demands of modern web development.')
                     @slot('twitterAccount', 'matthewporuben')
+                    @slot('linkedinAccount', null)
                 @endcomponent
 
                 @component('frontend.component.SpeakerCard')
@@ -45,6 +47,7 @@
                     @slot('talkTitle','Taming a zoo of packages')
                     @slot('talk', 'At our company we try to push code reuse to its best and do so by using 200+ own composer packages on 100+ projects. I will show you how we manage and process code changes, keep their quality and spread the word about them to our team. Doesn\'t matter, if you only have a single project and want to improve its quality, or if you manage a large number of projects and do not want to repeat yourself, this talk will give you practical tips for embracing code reuse and hopefully give you ideas how to taim your own zoo of packages.')
                     @slot('twitterAccount', null)
+                    @slot('linkedinAccount', 'simonzamecnik')
                 @endcomponent
 
                 {{-- Card - Proposal --}}

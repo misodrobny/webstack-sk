@@ -12,4 +12,8 @@
     <a target="_blank" href="https://www.instagram.com/webstack_sk/">
         <img src="{{ asset('assets/svgs/logo-instagram.svg') }}" alt="">
     </a>
+    <a target="_blank" href="https://www.linkedin.com/company/webstack-conference/">
+        <img src="{{ asset('assets/svgs/logo-linkedin.svg') }}" alt="">
+    </a>
+
 </div>
